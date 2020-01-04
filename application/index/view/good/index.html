@@ -1,0 +1,155 @@
+{include file="public/header" /}
+<body>
+<div class="container">
+
+    <!-- 商品详情 -->
+    <div class="row panel panel-heading panel-default">
+        <div class="col-md-6">
+            <div class="row" style="height: 400px;text-align: center;" >
+                <img src="/upload/good/{$goods.image}" width="80%" height="400px;s">
+            </div>
+            <div class="row" style="height: 200px; text-align: center;">
+                {volist name="images" id="val"}
+                <div class="col-md-4">
+                    <img src="/upload/good/{$val.images}" width="180px" height="180px">
+                </div>
+                {/volist}
+
+            </div>
+        </div>
+        <div class="col-md-6" style="text-align: center;">
+            <div class="row" style="margin-top: 40px;">
+                <span>{$goods.goods_name}</span>
+            </div>
+            <div class="row" style="margin-top: 40px;">
+                <span>{$goods.goods_description}</span>
+            </div>
+            <div class="row" style="margin-top: 40px;">
+                <span>商品配置</span>
+            </div>
+            <div class="row" style="margin-top: 40px;">
+                <span>{$goods.goods_price}</span>
+            </div>
+            <div class="row" style="margin-top: 40px;">
+                <button class="btn plus">+</button><input id="g_num"  value="1"  style="width: 30px;"><button class="btn minus">-</button>
+               <h6>库存：<span id="goods_num">{$goods.goods_num}</span></h6>
+            </div>
+            <div class="row" style="margin-top: 150px;">
+                <button class="btn btn-danger">立即购买</button>
+                <a class="btn btn-info" onclick="addcar()" >加入购物车</a>
+                <input type="hidden" id="g_id" value="{$goods.id}" >
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="panel panel-head panel-primary">
+            <h4>商品评论</h4>
+            {volist name="comment" id="val"}
+
+
+            {if condition="$val.message_status==1"}
+            <div class="panel panel-body panel-default">
+                <p>
+                 <h5>用户：{$val.user_name}</h5>
+                <h5>留言:{$val.message}</h5>
+                <h6>时间:{:date('Y-m-d H-i-s',$val.time)}</h6>
+                </p>
+            </div>
+            {/if}
+
+
+            {/volist}
+            <div class="panel-body panel">
+                <form>
+                    <div class="form-group">
+                        <input type="text" id="message" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="button" onclick="add({$goods.id})" class="btn btn-success" value="添加留言">
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+</body>
+</html>
+<script type="text/javascript">
+        $('.plus').on("click",function () {
+        //  alert(1);
+           var num=Number($("#g_num").val());
+            var nnum=num+1;
+            $("#g_num").val(nnum);
+            goods_num();
+        });
+        $('.minus').on("click",function () {
+            //  alert(1);
+            var num=Number($("#g_num").val());
+
+            if(num<=1)
+            {
+                alert("不能再减了");
+            }
+            else
+            {
+                var nnum=num-1;
+                $("#g_num").val(nnum);
+                goods_minus();
+            }
+        });
+        function goods_num() {
+            var num=Number($("#goods_num").html());
+            var nnum=num-1;
+            $("#goods_num").html(nnum);
+            if(num<1)
+            {
+                alert("没有库存了哦！");
+            }
+         //   alert(num);
+        }
+        function goods_minus() {
+            var num=Number($("#goods_num").html());
+            var nnum=num+1;
+            $("#goods_num").html(nnum);
+
+        };
+        //添加商品之购物车
+    function addcar() {
+       var g_num=$("#g_num").val();
+      var g_id=$('#g_id').val();
+     // alert(g_num);
+     // alert(g_id);
+        $.get("{:url('index/car/addcar')}",{id:g_id,num:g_num},function(data){
+            window.location.href="{:url('index/car/index')}";
+        });
+    }
+
+    //添加留言
+     function add(id) {
+//alert(id);
+         var message=$('#message').val();
+         $.post("{:url('index/good/comment')}",{id:id,message:message},function (data) {
+
+      //  alert(data);
+            if (data==1)
+            {
+                layer.msg("评论成功,审核通过后可查看",{icon:6},function () {
+                    window.location.reload();
+                });
+              //
+            }
+            else
+            {
+                layer.msg(data,{icon:5});
+            }
+         });
+        }
+
+</script>

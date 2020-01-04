@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="renderer" content="webkit">
+    <title></title>
+    <link rel="stylesheet" href="/static/admin/css/pintuer.css">
+    <link rel="stylesheet" href="/static/admin/css/admin.css">
+    <script src="/static/admin/js/jquery.js"></script>
+    <script src="/static/admin/js/pintuer.js"></script>
+    <!--layer-->
+    <script src="/static/admin/layer/layer.js"></script>
+    <!-- 引入无刷新上传图片 -->
+    <!-- 引入无刷新上传图片 -->
+    <script src="/static/admin/up/jquery.uploadifive.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="/static/admin/up/uploadifive.css">
+</head>
+<body>
+<div class="panel admin-panel">
+    <div class="panel-head"><strong class="icon-reorder"> 订单状态列表</strong></div>
+    <div class="padding border-bottom">
+
+    </div>
+    <table class="table table-hover text-center">
+        <form method="post" action="{:url('admin/order/ajax_status')}">
+        <th>
+            <input type="hidden" name="order_id" value="{$order_id}" >
+            <td>订单号：{$order_id}</td>
+        <td>
+            <select name="status"  id="TestSelect" style="width: 100%;"  >
+
+                {volist name="status_info" id="val"}
+                {if condition="$val.id==$status"}
+                <option value="{$val.id}" selected>{$val.status_name}</option>
+                {else/}
+                <option value="{$val.id}" >{$val.status_name}</option>
+                {/if}
+                {/volist}
+            </select  >
+        </td>
+        <td>
+            <input type="submit" class="btn "  value="提交">
+        </td>
+        </th>
+   </form>
+
+
+
+
+
+
+    </table>
+</div>
+</body>
+</html>
+<script>
+    function ajax_status(id) {
+        alert(id);
+        //   var status=$("#TestSelect option:selected").val();
+        //  alert(status);
+        /* $.get("{:url('admin/order/status')}",{id:id,status:status},function (data) {
+             alert(data);
+         })*/
+    }
+</script>

@@ -1,0 +1,93 @@
+{include file="public/static" /}
+<div class="panel admin-panel">
+    <div class="panel-head"><strong class="icon-reorder"> 内容列表</strong></div>
+
+    <table class="table table-hover text-center">
+        <tr>
+            <th>ID</th>
+            <th>用户名</th>
+            <th width="10%">评论商品名</th>
+            <th>评论时间</th>
+            <th>评论内容</th>
+            <th width="250">评论状态</th>
+            <th>操作</th>
+        </tr>
+        {volist name="$message" id="val"}
+           <tr>
+               <td>{$val.id}</td>
+               <td>{$val.user_name}</td>
+               <td>{$val.goods_name}</td>
+               <td>{:date('Y-m-d h-i-s',$val.time)}</td>
+               <td>{$val.message}</td>
+            <td>
+               <select name="status"  onchange="status(this,{$val.id})"  id="TestSelect" style="padding:5px 15px; border:1px solid #ddd;" >
+                     {if condition="$val.message_status==0"  }
+                   <option value="0" selected>未审核</option>
+                   <option value="1">审核通过</option>
+                   <option value="2">审核未通过</option>
+                   {elseif condition="$val.message_status==1" /}
+                   <option value="0" >未审核</option>
+                   <option value="1" selected>审核通过</option>
+                   <option value="2">审核未通过</option>
+                   {elseif condition="$val.message_status==2" /}
+                   <option value="0" >未审核</option>
+                   <option value="1" >审核通过</option>
+                   <option value="2" selected>审核未通过</option>
+                   {/if}
+
+               </select  >
+            </td>
+               <td>
+                   <div class="button-group">
+
+                       <a class="button border-red" href="javascript:void(0)" onclick="return del(this,{$val.id})"><span class="icon-trash-o"></span> 删除</a>
+                   </div>
+               </td>
+           </tr>
+        {/volist}
+
+
+
+
+    </table>
+</div>
+<script>
+    function status(obj,id) {
+         //  alert(id);
+
+        var status=$(obj).val();
+      //  alert(status);
+        $.get("{:url('admin/comment/status')}",{id:id,status:status},function(data){
+           //  alert(data);
+            if(data==1)
+            {
+                layer.msg('修改成功',{icon:6});
+            }
+            else
+
+            {
+                layer.msg('修改失败',{icon:5});
+            }
+        });
+
+
+    }
+
+    function del(obj,id)
+    {
+       // alert(id);
+      $.get("{:url('admin/comment/del')}",{id:id},function(data){
+       //   alert(data);
+          if(data==1)
+          {
+              layer.msg('删除成功',{icon:6});
+              $(obj).parent().parent().parent().remove();
+          }
+          else
+          {
+              layer.msg("删除失败",{icon:5});
+          }
+
+      });
+    }
+</script>

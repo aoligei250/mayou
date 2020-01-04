@@ -1,0 +1,29 @@
+{include file="public/static" /}
+<div class="panel admin-panel">
+    <div class="panel-head"><strong class="icon-reorder"> 内容列表</strong></div>
+
+    <table class="table table-hover text-center">
+        <tr>
+            <th width="5%">ID</th>
+            <th>用户名</th>
+            <th>用户密码</th>
+            <th>用户邮箱</th>
+
+        </tr>
+        {volist name="data" id="val"}
+        <tr>
+            <td>{$val.id}</td>
+            <td>{$val.user_name}</td>
+            <td>{$val.password}</td>
+            <td>{$val.email}</td>
+
+        </tr>
+        {/volist}
+
+
+
+
+
+
+    </table>
+</div>

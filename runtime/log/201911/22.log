@@ -1,0 +1,79 @@
+---------------------------------------------------------------
+[ 2019-11-22T09:36:48+08:00 ] 127.0.0.1 GET /
+[ info ] www.work.com/ [运行时间：1.213167s][吞吐率：0.82req/s] [内存消耗：2,861.78kb] [文件加载：50]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=3069371392',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3732.400 QQBrowser/10.5.3819.400',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\phpstudy_pro\WWW\work\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\work\public/../application/index\view\index\index.html [ array (
+  0 => 'data',
+  1 => 'cate',
+  2 => 'column',
+  3 => 'info',
+  4 => 'slider',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013931s ] mysql:host=127.0.0.1;port=3306;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `column` [ RunTime:0.001749s ]
+[ sql ] [ SQL ] SELECT * FROM `column` ORDER BY `sort` [ RunTime:0.000556s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.142600s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.004249s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `slider` [ RunTime:0.015939s ]
+[ sql ] [ SQL ] SELECT * FROM `slider` ORDER BY `sort` [ RunTime:0.001885s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cate` [ RunTime:0.001929s ]
+[ sql ] [ SQL ] SELECT * FROM `cate` [ RunTime:0.000407s ]
+[ sql ] [ SQL ] SELECT * FROM `cate` WHERE  `pid` = 0 [ RunTime:0.000524s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `goods` [ RunTime:0.002072s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 3 [ RunTime:0.000601s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ads` [ RunTime:0.002485s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 3 [ RunTime:0.000804s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 3 [ RunTime:0.000607s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 6 [ RunTime:0.000700s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 4 [ RunTime:0.000699s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 4 [ RunTime:0.000689s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 7 [ RunTime:0.000665s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 5 [ RunTime:0.000714s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 5 [ RunTime:0.000647s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 4 [ RunTime:0.000783s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 6 [ RunTime:0.000668s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 6 [ RunTime:0.000457s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 8 [ RunTime:0.000595s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 7 [ RunTime:0.000566s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 7 [ RunTime:0.000478s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 9 [ RunTime:0.000743s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 8 [ RunTime:0.001028s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 8 [ RunTime:0.000498s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 5 [ RunTime:0.000573s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 9 [ RunTime:0.000413s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 9 [ RunTime:0.000437s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 10 [ RunTime:0.000471s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 10 [ RunTime:0.000390s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 10 [ RunTime:0.000709s ]
+

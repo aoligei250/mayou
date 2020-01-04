@@ -1,0 +1,2670 @@
+---------------------------------------------------------------
+[ 2019-11-04T21:27:21+08:00 ] 127.0.0.1 GET /
+[ info ] www.work.com/ [运行时间：5.215921s][吞吐率：0.19req/s] [内存消耗：2,845.27kb] [文件加载：50]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6124228608; Hm_lvt_080836300300be57b7f34f4b3e97d911=1566800100,1566833998',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\phpstudy_pro\WWW\work\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\work\public/../application/index\view\index\index.html [ array (
+  0 => 'data',
+  1 => 'cate',
+  2 => 'column',
+  3 => 'info',
+  4 => 'slider',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.469908s ] mysql:host=127.0.0.1;port=3306;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `column` [ RunTime:0.321172s ]
+[ sql ] [ SQL ] SELECT * FROM `column` ORDER BY `sort` [ RunTime:0.026157s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.064958s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001584s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `slider` [ RunTime:0.028226s ]
+[ sql ] [ SQL ] SELECT * FROM `slider` ORDER BY `sort` [ RunTime:0.001353s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cate` [ RunTime:0.053648s ]
+[ sql ] [ SQL ] SELECT * FROM `cate` [ RunTime:0.001399s ]
+[ sql ] [ SQL ] SELECT * FROM `cate` WHERE  `pid` = 0 [ RunTime:0.002497s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ads` [ RunTime:0.032112s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 3 [ RunTime:0.001205s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `goods` [ RunTime:0.003372s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 3 [ RunTime:0.002192s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 4 [ RunTime:0.002546s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 4 [ RunTime:0.001967s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 5 [ RunTime:0.003296s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 5 [ RunTime:0.001969s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 6 [ RunTime:0.001250s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 6 [ RunTime:0.001324s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 7 [ RunTime:0.001495s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 7 [ RunTime:0.001273s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 8 [ RunTime:0.001203s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 8 [ RunTime:0.001475s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 9 [ RunTime:0.001381s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 9 [ RunTime:0.002169s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 10 [ RunTime:0.001307s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 10 [ RunTime:0.001625s ]
+---------------------------------------------------------------
+[ 2019-11-04T21:27:29+08:00 ] 127.0.0.1 GET /index/car/index.html
+[ info ] www.work.com/index/car/index.html [运行时间：0.074353s][吞吐率：13.45req/s] [内存消耗：2,560.11kb] [文件加载：48]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'car',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6124228608; Hm_lvt_080836300300be57b7f34f4b3e97d911=1566800100,1566833998; PHPSESSID=8jfd7mottp24pgcm3n30c45p67',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.work.com/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+  '/index/car/index_html' => '',
+)
+[ info ] [ RUN ] app\index\controller\Car->index[ D:\phpstudy_pro\WWW\work\application\index\controller\Car.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\work\public/../application/index\view\car\index.html [ array (
+  0 => 'data',
+  1 => 'column',
+  2 => 'info',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010750s ] mysql:host=127.0.0.1;port=3306;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `column` [ RunTime:0.002682s ]
+[ sql ] [ SQL ] SELECT * FROM `column` [ RunTime:0.001386s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.002379s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001999s ]
+---------------------------------------------------------------
+[ 2019-11-04T21:27:31+08:00 ] 127.0.0.1 GET /
+[ info ] www.work.com/ [运行时间：0.125967s][吞吐率：7.94req/s] [内存消耗：2,845.32kb] [文件加载：50]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6124228608; Hm_lvt_080836300300be57b7f34f4b3e97d911=1566800100,1566833998; PHPSESSID=8jfd7mottp24pgcm3n30c45p67',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\phpstudy_pro\WWW\work\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\work\public/../application/index\view\index\index.html [ array (
+  0 => 'data',
+  1 => 'cate',
+  2 => 'column',
+  3 => 'info',
+  4 => 'slider',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012240s ] mysql:host=127.0.0.1;port=3306;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `column` [ RunTime:0.014907s ]
+[ sql ] [ SQL ] SELECT * FROM `column` ORDER BY `sort` [ RunTime:0.001489s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.002424s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001528s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `slider` [ RunTime:0.002435s ]
+[ sql ] [ SQL ] SELECT * FROM `slider` ORDER BY `sort` [ RunTime:0.001546s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cate` [ RunTime:0.003626s ]
+[ sql ] [ SQL ] SELECT * FROM `cate` [ RunTime:0.004190s ]
+[ sql ] [ SQL ] SELECT * FROM `cate` WHERE  `pid` = 0 [ RunTime:0.001663s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ads` [ RunTime:0.003224s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 3 [ RunTime:0.003495s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `goods` [ RunTime:0.003672s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 3 [ RunTime:0.002222s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 4 [ RunTime:0.002036s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 4 [ RunTime:0.002199s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 5 [ RunTime:0.001467s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 5 [ RunTime:0.001385s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 6 [ RunTime:0.003216s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 6 [ RunTime:0.002632s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 7 [ RunTime:0.001387s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 7 [ RunTime:0.001432s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 8 [ RunTime:0.001786s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 8 [ RunTime:0.001852s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 9 [ RunTime:0.001404s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 9 [ RunTime:0.001387s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 10 [ RunTime:0.002383s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 10 [ RunTime:0.002421s ]
+---------------------------------------------------------------
+[ 2019-11-04T21:27:37+08:00 ] 127.0.0.1 GET /index/type/index/id/3.html
+[ info ] www.work.com/index/type/index/id/3.html [运行时间：0.198706s][吞吐率：5.03req/s] [内存消耗：2,818.67kb] [文件加载：50]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'type',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6124228608; Hm_lvt_080836300300be57b7f34f4b3e97d911=1566800100,1566833998; PHPSESSID=8jfd7mottp24pgcm3n30c45p67',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.work.com/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+  '/index/type/index/id/3_html' => '',
+  'id' => '3',
+)
+[ info ] [ RUN ] app\index\controller\Type->index[ D:\phpstudy_pro\WWW\work\application\index\controller\Type.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\work\public/../application/index\view\type\index.html [ array (
+  0 => 'goods',
+  1 => 'cate',
+  2 => 'column',
+  3 => 'info',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002967s ] mysql:host=127.0.0.1;port=3306;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `column` [ RunTime:0.021250s ]
+[ sql ] [ SQL ] SELECT * FROM `column` ORDER BY `sort` [ RunTime:0.001326s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.002407s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001296s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cate` [ RunTime:0.002086s ]
+[ sql ] [ SQL ] SELECT * FROM `cate` [ RunTime:0.001238s ]
+[ sql ] [ SQL ] SELECT * FROM `cate` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.043674s ]
+[ sql ] [ SQL ] SELECT * FROM `cate` WHERE  `pid` = 3 [ RunTime:0.001478s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `goods` [ RunTime:0.002280s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` IN (6,7) [ RunTime:0.024510s ]
+---------------------------------------------------------------
+[ 2019-11-04T21:27:39+08:00 ] 127.0.0.1 GET /index/good/index/id/18.html
+[ info ] www.work.com/index/good/index/id/18.html [运行时间：0.173311s][吞吐率：5.77req/s] [内存消耗：2,572.89kb] [文件加载：48]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'good',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6124228608; Hm_lvt_080836300300be57b7f34f4b3e97d911=1566800100,1566833998; PHPSESSID=8jfd7mottp24pgcm3n30c45p67',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.work.com/index/type/index/id/3.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+  '/index/good/index/id/18_html' => '',
+  'id' => '18',
+)
+[ info ] [ RUN ] app\index\controller\Good->index[ D:\phpstudy_pro\WWW\work\application\index\controller\Good.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\work\public/../application/index\view\good\index.html [ array (
+  0 => 'comment',
+  1 => 'images',
+  2 => 'info',
+  3 => 'column',
+  4 => 'goods',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.018173s ] mysql:host=127.0.0.1;port=3306;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `goods` [ RunTime:0.013823s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `id` = 18 LIMIT 1 [ RunTime:0.001047s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `images` [ RunTime:0.063813s ]
+[ sql ] [ SQL ] SELECT * FROM `images` WHERE  `gid` = 18 [ RunTime:0.004676s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.002023s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000924s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `column` [ RunTime:0.001899s ]
+[ sql ] [ SQL ] SELECT * FROM `column` [ RunTime:0.000797s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `comment` [ RunTime:0.003866s ]
+[ sql ] [ SQL ] SELECT `comment`.*,`user`.`user_name` FROM `comment` INNER JOIN `user` ON `user`.`id`=`comment`.`u_id` WHERE  `g_id` = 18 [ RunTime:0.014996s ]
+---------------------------------------------------------------
+[ 2019-11-04T21:27:46+08:00 ] 127.0.0.1 POST /index/good/comment.html
+[ info ] www.work.com/index/good/comment.html [运行时间：0.076099s][吞吐率：13.14req/s] [内存消耗：1,602.81kb] [文件加载：39]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'good',
+    2 => 'comment',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6124228608; Hm_lvt_080836300300be57b7f34f4b3e97d911=1566800100,1566833998; PHPSESSID=8jfd7mottp24pgcm3n30c45p67',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.work.com/index/good/index/id/18.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.work.com',
+  'accept' => '*/*',
+  'content-length' => '19',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+  '/index/good/comment_html' => '',
+  'id' => '18',
+  'message' => '12321',
+)
+[ info ] [ RUN ] app\index\controller\Good->comment[ D:\phpstudy_pro\WWW\work\application\index\controller\Good.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-11-04T21:27:51+08:00 ] 127.0.0.1 GET /index/car/addcar.html?id=18&num=1
+[ info ] www.work.com/index/car/addcar.html?id=18&num=1 [运行时间：0.050671s][吞吐率：19.74req/s] [内存消耗：2,483.78kb] [文件加载：45]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'car',
+    2 => 'addcar',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6124228608; Hm_lvt_080836300300be57b7f34f4b3e97d911=1566800100,1566833998; PHPSESSID=8jfd7mottp24pgcm3n30c45p67',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.work.com/index/good/index/id/18.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => '*/*',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+  '/index/car/addcar_html' => '',
+  'id' => '18',
+  'num' => '1',
+)
+[ info ] [ RUN ] app\index\controller\Car->addcar[ D:\phpstudy_pro\WWW\work\application\index\controller\Car.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011775s ] mysql:host=127.0.0.1;port=3306;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `goods` [ RunTime:0.002351s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `id` = 18 LIMIT 1 [ RunTime:0.001394s ]
+---------------------------------------------------------------
+[ 2019-11-04T21:27:51+08:00 ] 127.0.0.1 GET /index/car/index.html
+[ info ] www.work.com/index/car/index.html [运行时间：0.114723s][吞吐率：8.72req/s] [内存消耗：2,564.05kb] [文件加载：48]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'car',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6124228608; Hm_lvt_080836300300be57b7f34f4b3e97d911=1566800100,1566833998; PHPSESSID=8jfd7mottp24pgcm3n30c45p67',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.work.com/index/good/index/id/18.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+  '/index/car/index_html' => '',
+)
+[ info ] [ RUN ] app\index\controller\Car->index[ D:\phpstudy_pro\WWW\work\application\index\controller\Car.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\work\public/../application/index\view\car\index.html [ array (
+  0 => 'data',
+  1 => 'column',
+  2 => 'info',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010684s ] mysql:host=127.0.0.1;port=3306;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `column` [ RunTime:0.049217s ]
+[ sql ] [ SQL ] SELECT * FROM `column` [ RunTime:0.002676s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.016199s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.002567s ]
+---------------------------------------------------------------
+[ 2019-11-04T21:27:53+08:00 ] 127.0.0.1 POST /index/car/addnum.html
+[ info ] www.work.com/index/car/addnum.html [运行时间：0.074768s][吞吐率：13.37req/s] [内存消耗：1,608.48kb] [文件加载：39]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'car',
+    2 => 'addnum',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6124228608; Hm_lvt_080836300300be57b7f34f4b3e97d911=1566800100,1566833998; PHPSESSID=8jfd7mottp24pgcm3n30c45p67',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.work.com/index/car/index.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.work.com',
+  'accept' => '*/*',
+  'content-length' => '5',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+  '/index/car/addnum_html' => '',
+  'id' => '18',
+)
+[ info ] [ RUN ] app\index\controller\Car->addnum[ D:\phpstudy_pro\WWW\work\application\index\controller\Car.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-11-04T21:27:53+08:00 ] 127.0.0.1 POST /index/car/addnum.html
+[ info ] www.work.com/index/car/addnum.html [运行时间：0.021999s][吞吐率：45.46req/s] [内存消耗：1,608.48kb] [文件加载：39]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'car',
+    2 => 'addnum',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6124228608; Hm_lvt_080836300300be57b7f34f4b3e97d911=1566800100,1566833998; PHPSESSID=8jfd7mottp24pgcm3n30c45p67',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.work.com/index/car/index.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.work.com',
+  'accept' => '*/*',
+  'content-length' => '5',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+  '/index/car/addnum_html' => '',
+  'id' => '18',
+)
+[ info ] [ RUN ] app\index\controller\Car->addnum[ D:\phpstudy_pro\WWW\work\application\index\controller\Car.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-11-04T21:27:53+08:00 ] 127.0.0.1 POST /index/car/addnum.html
+[ info ] www.work.com/index/car/addnum.html [运行时间：0.022639s][吞吐率：44.17req/s] [内存消耗：1,608.48kb] [文件加载：39]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'car',
+    2 => 'addnum',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6124228608; Hm_lvt_080836300300be57b7f34f4b3e97d911=1566800100,1566833998; PHPSESSID=8jfd7mottp24pgcm3n30c45p67',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.work.com/index/car/index.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.work.com',
+  'accept' => '*/*',
+  'content-length' => '5',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+  '/index/car/addnum_html' => '',
+  'id' => '18',
+)
+[ info ] [ RUN ] app\index\controller\Car->addnum[ D:\phpstudy_pro\WWW\work\application\index\controller\Car.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-11-04T21:27:55+08:00 ] 127.0.0.1 GET /index/car/index.html
+[ info ] www.work.com/index/car/index.html [运行时间：0.056207s][吞吐率：17.79req/s] [内存消耗：2,564.25kb] [文件加载：48]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'car',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6124228608; Hm_lvt_080836300300be57b7f34f4b3e97d911=1566800100,1566833998; PHPSESSID=8jfd7mottp24pgcm3n30c45p67',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.work.com/index/good/index/id/18.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+  '/index/car/index_html' => '',
+)
+[ info ] [ RUN ] app\index\controller\Car->index[ D:\phpstudy_pro\WWW\work\application\index\controller\Car.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\work\public/../application/index\view\car\index.html [ array (
+  0 => 'data',
+  1 => 'column',
+  2 => 'info',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011768s ] mysql:host=127.0.0.1;port=3306;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `column` [ RunTime:0.002436s ]
+[ sql ] [ SQL ] SELECT * FROM `column` [ RunTime:0.001253s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.002710s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001297s ]
+---------------------------------------------------------------
+[ 2019-11-04T21:27:57+08:00 ] 127.0.0.1 POST /index/pay/index.html
+[ info ] www.work.com/index/pay/index.html [运行时间：0.110229s][吞吐率：9.07req/s] [内存消耗：1,879.72kb] [文件加载：43]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'pay',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6124228608; Hm_lvt_080836300300be57b7f34f4b3e97d911=1566800100,1566833998; PHPSESSID=8jfd7mottp24pgcm3n30c45p67',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.work.com/index/car/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'upgrade-insecure-requests' => '1',
+  'origin' => 'http://www.work.com',
+  'cache-control' => 'max-age=0',
+  'content-length' => '0',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+  '/index/pay/index_html' => '',
+)
+[ info ] [ RUN ] app\index\controller\Pay->index[ D:\phpstudy_pro\WWW\work\application\index\controller\Pay.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\work\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-11-04T21:27:58+08:00 ] 127.0.0.1 GET /index/login/index.html
+[ info ] www.work.com/index/login/index.html [运行时间：0.073743s][吞吐率：13.56req/s] [内存消耗：1,663.77kb] [文件加载：41]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6124228608; Hm_lvt_080836300300be57b7f34f4b3e97d911=1566800100,1566833998; PHPSESSID=8jfd7mottp24pgcm3n30c45p67',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.work.com/index/pay/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+  '/index/login/index_html' => '',
+)
+[ info ] [ RUN ] app\index\controller\Login->index[ D:\phpstudy_pro\WWW\work\application\index\controller\Login.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\work\public/../application/index\view\login\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-11-04T21:28:05+08:00 ] 127.0.0.1 POST /index/login/checklogin.html
+[ info ] www.work.com/index/login/checklogin.html [运行时间：0.066212s][吞吐率：15.10req/s] [内存消耗：2,489.63kb] [文件加载：46]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => 'checklogin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6124228608; Hm_lvt_080836300300be57b7f34f4b3e97d911=1566800100,1566833998; PHPSESSID=8jfd7mottp24pgcm3n30c45p67',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.work.com/index/login/index.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.work.com',
+  'accept' => '*/*',
+  'content-length' => '26',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+  '/index/login/checklogin_html' => '',
+  'user_name' => '123',
+  'password' => '123',
+)
+[ info ] [ RUN ] app\index\controller\Login->checklogin[ D:\phpstudy_pro\WWW\work\application\index\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.022227s ] mysql:host=127.0.0.1;port=3306;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.002967s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `user_name` = '123' LIMIT 1 [ RunTime:0.001464s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `user_name` = '123'  AND `password` = '123' LIMIT 1 [ RunTime:0.001387s ]
+---------------------------------------------------------------
+[ 2019-11-04T21:28:06+08:00 ] 127.0.0.1 GET /index/index/index.html
+[ info ] www.work.com/index/index/index.html [运行时间：0.129942s][吞吐率：7.70req/s] [内存消耗：2,853.16kb] [文件加载：50]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6124228608; Hm_lvt_080836300300be57b7f34f4b3e97d911=1566800100,1566833998; PHPSESSID=8jfd7mottp24pgcm3n30c45p67',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.work.com/index/login/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+  '/index/index/index_html' => '',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\phpstudy_pro\WWW\work\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\work\public/../application/index\view\index\index.html [ array (
+  0 => 'data',
+  1 => 'cate',
+  2 => 'column',
+  3 => 'info',
+  4 => 'slider',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003635s ] mysql:host=127.0.0.1;port=3306;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `column` [ RunTime:0.017107s ]
+[ sql ] [ SQL ] SELECT * FROM `column` ORDER BY `sort` [ RunTime:0.001848s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.002029s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001214s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `slider` [ RunTime:0.002096s ]
+[ sql ] [ SQL ] SELECT * FROM `slider` ORDER BY `sort` [ RunTime:0.002464s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cate` [ RunTime:0.004552s ]
+[ sql ] [ SQL ] SELECT * FROM `cate` [ RunTime:0.001948s ]
+[ sql ] [ SQL ] SELECT * FROM `cate` WHERE  `pid` = 0 [ RunTime:0.001467s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ads` [ RunTime:0.002279s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 3 [ RunTime:0.001469s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `goods` [ RunTime:0.004673s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 3 [ RunTime:0.002332s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 4 [ RunTime:0.001927s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 4 [ RunTime:0.001431s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 5 [ RunTime:0.001290s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 5 [ RunTime:0.001334s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 6 [ RunTime:0.001736s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 6 [ RunTime:0.003750s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 7 [ RunTime:0.001920s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 7 [ RunTime:0.001760s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 8 [ RunTime:0.001899s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 8 [ RunTime:0.001662s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 9 [ RunTime:0.001855s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 9 [ RunTime:0.002691s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 10 [ RunTime:0.004235s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 10 [ RunTime:0.003405s ]
+---------------------------------------------------------------
+[ 2019-11-04T21:28:12+08:00 ] 127.0.0.1 GET /iadmin
+[ info ] www.work.com/iadmin [运行时间：0.184977s][吞吐率：5.41req/s] [内存消耗：1,316.66kb] [文件加载：34]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'iadmin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6124228608; Hm_lvt_080836300300be57b7f34f4b3e97d911=1566800100,1566833998; PHPSESSID=8jfd7mottp24pgcm3n30c45p67',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+  '/iadmin' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-11-04T21:28:18+08:00 ] 127.0.0.1 GET /admin
+[ info ] www.work.com/admin [运行时间：0.198951s][吞吐率：5.03req/s] [内存消耗：1,654.85kb] [文件加载：41]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6124228608; Hm_lvt_080836300300be57b7f34f4b3e97d911=1566800100,1566833998; PHPSESSID=8jfd7mottp24pgcm3n30c45p67',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Index->index[ D:\phpstudy_pro\WWW\work\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\work\public/../application/admin\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-11-04T21:28:19+08:00 ] 127.0.0.1 GET /admin/info/index.html
+[ info ] www.work.com/admin/info/index.html [运行时间：0.101237s][吞吐率：9.88req/s] [内存消耗：1,665.80kb] [文件加载：42]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'info',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6124228608; Hm_lvt_080836300300be57b7f34f4b3e97d911=1566800100,1566833998; PHPSESSID=8jfd7mottp24pgcm3n30c45p67',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.work.com/admin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/info/index_html' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-11-04T21:28:19+08:00 ] 127.0.0.1 GET /admin/login/index.html
+[ info ] www.work.com/admin/login/index.html [运行时间：0.029295s][吞吐率：34.14req/s] [内存消耗：1,598.53kb] [文件加载：38]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6124228608; Hm_lvt_080836300300be57b7f34f4b3e97d911=1566800100,1566833998; PHPSESSID=8jfd7mottp24pgcm3n30c45p67',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.work.com/admin',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/index_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Login->index[ D:\phpstudy_pro\WWW\work\application\admin\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-11-04T21:28:19+08:00 ] 127.0.0.1 GET /admin/login/login/
+[ info ] www.work.com/admin/login/login/ [运行时间：0.063376s][吞吐率：15.78req/s] [内存消耗：1,662.25kb] [文件加载：41]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6124228608; Hm_lvt_080836300300be57b7f34f4b3e97d911=1566800100,1566833998; PHPSESSID=8jfd7mottp24pgcm3n30c45p67',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.work.com/admin/login/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/login/' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ D:\phpstudy_pro\WWW\work\application\admin\controller\Login.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\work\public/../application/admin\view\login\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-11-04T21:28:19+08:00 ] 127.0.0.1 GET /captcha.html
+[ info ] www.work.com/captcha.html [运行时间：0.279947s][吞吐率：3.57req/s] [内存消耗：1,335.97kb] [文件加载：33]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6124228608; Hm_lvt_080836300300be57b7f34f4b3e97d911=1566800100,1566833998; PHPSESSID=8jfd7mottp24pgcm3n30c45p67',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.work.com/admin/login/login/',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+  '/captcha_html' => '',
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ D:\phpstudy_pro\WWW\work\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-11-04T21:28:25+08:00 ] 127.0.0.1 GET /captcha.html?
+[ info ] www.work.com/captcha.html? [运行时间：0.069670s][吞吐率：14.35req/s] [内存消耗：1,336.09kb] [文件加载：33]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6124228608; Hm_lvt_080836300300be57b7f34f4b3e97d911=1566800100,1566833998; PHPSESSID=8jfd7mottp24pgcm3n30c45p67',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.work.com/admin/login/login/',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+  '/captcha_html' => '',
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ D:\phpstudy_pro\WWW\work\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-11-04T21:28:29+08:00 ] 127.0.0.1 POST /admin/login/checklogin.html
+[ info ] www.work.com/admin/login/checklogin.html [运行时间：0.141835s][吞吐率：7.05req/s] [内存消耗：2,540.81kb] [文件加载：47]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'checklogin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6124228608; Hm_lvt_080836300300be57b7f34f4b3e97d911=1566800100,1566833998; PHPSESSID=8jfd7mottp24pgcm3n30c45p67',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.work.com/admin/login/login/',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.work.com',
+  'accept' => '*/*',
+  'content-length' => '39',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/login/checklogin_html' => '',
+  'admin_name' => 'admin',
+  'password' => '123',
+  'code' => '4581',
+)
+[ info ] [ RUN ] app\admin\controller\Login->checklogin[ D:\phpstudy_pro\WWW\work\application\admin\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010893s ] mysql:host=127.0.0.1;port=3306;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin` [ RunTime:0.091882s ]
+[ sql ] [ SQL ] SELECT * FROM `admin` WHERE  `admin_name` = 'admin' LIMIT 1 [ RunTime:0.001077s ]
+[ sql ] [ SQL ] SELECT * FROM `admin` WHERE  `admin_name` = 'admin'  AND `password` = '123' LIMIT 1 [ RunTime:0.001087s ]
+---------------------------------------------------------------
+[ 2019-11-04T21:28:29+08:00 ] 127.0.0.1 GET /admin.html
+[ info ] www.work.com/admin.html [运行时间：0.032379s][吞吐率：30.88req/s] [内存消耗：1,655.63kb] [文件加载：41]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6124228608; Hm_lvt_080836300300be57b7f34f4b3e97d911=1566800100,1566833998; PHPSESSID=8jfd7mottp24pgcm3n30c45p67',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.work.com/admin/login/login/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Index->index[ D:\phpstudy_pro\WWW\work\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\work\public/../application/admin\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-11-04T21:28:29+08:00 ] 127.0.0.1 GET /admin/info/index.html
+[ info ] www.work.com/admin/info/index.html [运行时间：0.073292s][吞吐率：13.64req/s] [内存消耗：2,554.82kb] [文件加载：49]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'info',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6124228608; Hm_lvt_080836300300be57b7f34f4b3e97d911=1566800100,1566833998; PHPSESSID=8jfd7mottp24pgcm3n30c45p67',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.work.com/admin.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/info/index_html' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Info->index[ D:\phpstudy_pro\WWW\work\application\admin\controller\Info.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\work\public/../application/admin\view\info\index.html [ array (
+  0 => 'info',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003865s ] mysql:host=127.0.0.1;port=3306;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.003779s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.002715s ]
+---------------------------------------------------------------
+[ 2019-11-04T21:28:39+08:00 ] 127.0.0.1 GET /admin/user/index.html
+[ info ] www.work.com/admin/user/index.html [运行时间：0.057142s][吞吐率：17.50req/s] [内存消耗：2,480.17kb] [文件加载：47]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6124228608; Hm_lvt_080836300300be57b7f34f4b3e97d911=1566800100,1566833998; PHPSESSID=8jfd7mottp24pgcm3n30c45p67',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.work.com/admin.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/user/index_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\User->index[ D:\phpstudy_pro\WWW\work\application\admin\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\work\public/../application/admin\view\user\index.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002091s ] mysql:host=127.0.0.1;port=3306;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.001996s ]
+[ sql ] [ SQL ] SELECT * FROM `user` [ RunTime:0.000934s ]
+---------------------------------------------------------------
+[ 2019-11-04T21:28:40+08:00 ] 127.0.0.1 GET /admin/comment/index.html
+[ info ] www.work.com/admin/comment/index.html [运行时间：0.125887s][吞吐率：7.94req/s] [内存消耗：2,540.95kb] [文件加载：48]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'comment',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6124228608; Hm_lvt_080836300300be57b7f34f4b3e97d911=1566800100,1566833998; PHPSESSID=8jfd7mottp24pgcm3n30c45p67',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.work.com/admin.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/comment/index_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Comment->index[ D:\phpstudy_pro\WWW\work\application\admin\controller\Comment.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\work\public/../application/admin\view\comment\index.html [ array (
+  0 => 'message',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011217s ] mysql:host=127.0.0.1;port=3306;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `comment` [ RunTime:0.002477s ]
+[ sql ] [ SQL ] SELECT `comment`.*,`user`.`user_name`,`goods`.`goods_name` FROM `comment` INNER JOIN `user` ON `user`.`id`=`comment`.`u_id` INNER JOIN `goods` ON `goods`.`id`=`comment`.`g_id` [ RunTime:0.021682s ]
+---------------------------------------------------------------
+[ 2019-11-04T21:28:41+08:00 ] 127.0.0.1 GET /admin/good/index.html
+[ info ] www.work.com/admin/good/index.html [运行时间：0.130051s][吞吐率：7.69req/s] [内存消耗：2,752.47kb] [文件加载：50]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'good',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6124228608; Hm_lvt_080836300300be57b7f34f4b3e97d911=1566800100,1566833998; PHPSESSID=8jfd7mottp24pgcm3n30c45p67',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.work.com/admin.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/good/index_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Good->index[ D:\phpstudy_pro\WWW\work\application\admin\controller\Good.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\work\public/../application/admin\view\good\index.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.021378s ] mysql:host=127.0.0.1;port=3306;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `goods` [ RunTime:0.002093s ]
+[ sql ] [ SQL ] SELECT `goods`.*,`cate`.`cate_name` FROM `goods` INNER JOIN `cate` ON `cate`.`id`=`goods`.`cate_id` [ RunTime:0.013226s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `images` [ RunTime:0.001745s ]
+[ sql ] [ SQL ] SELECT * FROM `images` WHERE  `gid` = 18 [ RunTime:0.000907s ]
+[ sql ] [ SQL ] SELECT * FROM `images` WHERE  `gid` = 19 [ RunTime:0.000856s ]
+[ sql ] [ SQL ] SELECT * FROM `images` WHERE  `gid` = 20 [ RunTime:0.001104s ]
+---------------------------------------------------------------
+[ 2019-11-04T21:28:42+08:00 ] 127.0.0.1 GET /admin/order/index.html
+[ info ] www.work.com/admin/order/index.html [运行时间：0.141526s][吞吐率：7.07req/s] [内存消耗：2,551.06kb] [文件加载：48]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'order',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6124228608; Hm_lvt_080836300300be57b7f34f4b3e97d911=1566800100,1566833998; PHPSESSID=8jfd7mottp24pgcm3n30c45p67',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.work.com/admin.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/order/index_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Order->index[ D:\phpstudy_pro\WWW\work\application\admin\controller\Order.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\work\public/../application/admin\view\order\index.html [ array (
+  0 => 'status',
+  1 => 'order',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010973s ] mysql:host=127.0.0.1;port=3306;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `order` [ RunTime:0.045875s ]
+[ sql ] [ SQL ] SELECT `order`.*,`user`.`user_name`,`goods`.*,`addres`.*,`status`.* FROM `order` INNER JOIN `user` ON `user`.`id`=`order`.`u_id` INNER JOIN `goods` ON `order`.`g_id`=`goods`.`id` INNER JOIN `addres` ON `order`.`a_id`=`addres`.`id` INNER JOIN `status` ON `status`.`id`=`order_status` [ RunTime:0.017992s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `status` [ RunTime:0.001831s ]
+[ sql ] [ SQL ] SELECT * FROM `status` [ RunTime:0.001299s ]
+---------------------------------------------------------------
+[ 2019-11-04T21:28:43+08:00 ] 127.0.0.1 GET /admin/cate/index.html
+[ info ] www.work.com/admin/cate/index.html [运行时间：0.134663s][吞吐率：7.43req/s] [内存消耗：2,928.16kb] [文件加载：52]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'cate',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6124228608; Hm_lvt_080836300300be57b7f34f4b3e97d911=1566800100,1566833998; PHPSESSID=8jfd7mottp24pgcm3n30c45p67',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.work.com/admin.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/cate/index_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Cate->index[ D:\phpstudy_pro\WWW\work\application\admin\controller\Cate.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\work\public/../application/admin\view\cate\index.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011933s ] mysql:host=127.0.0.1;port=3306;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cate` [ RunTime:0.003580s ]
+[ sql ] [ SQL ] SELECT * FROM `cate` [ RunTime:0.001324s ]
+---------------------------------------------------------------
+[ 2019-11-04T21:28:43+08:00 ] 127.0.0.1 GET /add.html
+[ info ] www.work.com/add.html [运行时间：0.020998s][吞吐率：47.62req/s] [内存消耗：1,317.45kb] [文件加载：34]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'add',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6124228608; Hm_lvt_080836300300be57b7f34f4b3e97d911=1566800100,1566833998; PHPSESSID=8jfd7mottp24pgcm3n30c45p67',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.work.com/admin.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+  '/add_html' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-11-04T21:28:44+08:00 ] 127.0.0.1 GET /list.html
+[ info ] www.work.com/list.html [运行时间：0.019203s][吞吐率：52.08req/s] [内存消耗：1,317.46kb] [文件加载：34]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'list',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6124228608; Hm_lvt_080836300300be57b7f34f4b3e97d911=1566800100,1566833998; PHPSESSID=8jfd7mottp24pgcm3n30c45p67',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.work.com/admin.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+  '/list_html' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-11-04T21:28:44+08:00 ] 127.0.0.1 GET /admin/column/index.html
+[ info ] www.work.com/admin/column/index.html [运行时间：0.070977s][吞吐率：14.09req/s] [内存消耗：2,684.21kb] [文件加载：50]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'column',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6124228608; Hm_lvt_080836300300be57b7f34f4b3e97d911=1566800100,1566833998; PHPSESSID=8jfd7mottp24pgcm3n30c45p67',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.work.com/admin.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/column/index_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Column->index[ D:\phpstudy_pro\WWW\work\application\admin\controller\Column.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\work\public/../application/admin\view\column\index.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002010s ] mysql:host=127.0.0.1;port=3306;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `column` [ RunTime:0.001583s ]
+[ sql ] [ SQL ] SELECT * FROM `column` [ RunTime:0.000987s ]
+---------------------------------------------------------------
+[ 2019-11-04T21:28:45+08:00 ] 127.0.0.1 GET /list.html
+[ info ] www.work.com/list.html [运行时间：0.017846s][吞吐率：56.03req/s] [内存消耗：1,317.46kb] [文件加载：34]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'list',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6124228608; Hm_lvt_080836300300be57b7f34f4b3e97d911=1566800100,1566833998; PHPSESSID=8jfd7mottp24pgcm3n30c45p67',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.work.com/admin.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+  '/list_html' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-11-04T21:28:46+08:00 ] 127.0.0.1 GET /admin/column/index.html
+[ info ] www.work.com/admin/column/index.html [运行时间：0.044190s][吞吐率：22.63req/s] [内存消耗：2,543.28kb] [文件加载：48]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'column',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6124228608; Hm_lvt_080836300300be57b7f34f4b3e97d911=1566800100,1566833998; PHPSESSID=8jfd7mottp24pgcm3n30c45p67',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.work.com/admin.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/column/index_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Column->index[ D:\phpstudy_pro\WWW\work\application\admin\controller\Column.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\work\public/../application/admin\view\column\index.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012196s ] mysql:host=127.0.0.1;port=3306;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `column` [ RunTime:0.002527s ]
+[ sql ] [ SQL ] SELECT * FROM `column` [ RunTime:0.001246s ]
+---------------------------------------------------------------
+[ 2019-11-04T21:28:48+08:00 ] 127.0.0.1 GET /admin/slider/index.html
+[ info ] www.work.com/admin/slider/index.html [运行时间：0.101770s][吞吐率：9.83req/s] [内存消耗：2,547.19kb] [文件加载：48]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'slider',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6124228608; Hm_lvt_080836300300be57b7f34f4b3e97d911=1566800100,1566833998; PHPSESSID=8jfd7mottp24pgcm3n30c45p67',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.work.com/admin.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/slider/index_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Slider->index[ D:\phpstudy_pro\WWW\work\application\admin\controller\Slider.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\work\public/../application/admin\view\slider\index.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011265s ] mysql:host=127.0.0.1;port=3306;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `slider` [ RunTime:0.002417s ]
+[ sql ] [ SQL ] SELECT * FROM `slider` [ RunTime:0.012908s ]
+---------------------------------------------------------------
+[ 2019-11-04T21:28:53+08:00 ] 127.0.0.1 GET /admin/good/index.html
+[ info ] www.work.com/admin/good/index.html [运行时间：0.070273s][吞吐率：14.23req/s] [内存消耗：2,591.36kb] [文件加载：48]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'good',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6124228608; Hm_lvt_080836300300be57b7f34f4b3e97d911=1566800100,1566833998; PHPSESSID=8jfd7mottp24pgcm3n30c45p67',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.work.com/admin.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/good/index_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Good->index[ D:\phpstudy_pro\WWW\work\application\admin\controller\Good.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\work\public/../application/admin\view\good\index.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012025s ] mysql:host=127.0.0.1;port=3306;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `goods` [ RunTime:0.020078s ]
+[ sql ] [ SQL ] SELECT `goods`.*,`cate`.`cate_name` FROM `goods` INNER JOIN `cate` ON `cate`.`id`=`goods`.`cate_id` [ RunTime:0.001940s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `images` [ RunTime:0.001926s ]
+[ sql ] [ SQL ] SELECT * FROM `images` WHERE  `gid` = 18 [ RunTime:0.002484s ]
+[ sql ] [ SQL ] SELECT * FROM `images` WHERE  `gid` = 19 [ RunTime:0.001537s ]
+[ sql ] [ SQL ] SELECT * FROM `images` WHERE  `gid` = 20 [ RunTime:0.001406s ]
+---------------------------------------------------------------
+[ 2019-11-04T21:28:56+08:00 ] 127.0.0.1 GET /admin/cate/index.html
+[ info ] www.work.com/admin/cate/index.html [运行时间：0.049652s][吞吐率：20.14req/s] [内存消耗：2,792.21kb] [文件加载：50]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'cate',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6124228608; Hm_lvt_080836300300be57b7f34f4b3e97d911=1566800100,1566833998; PHPSESSID=8jfd7mottp24pgcm3n30c45p67',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.work.com/admin.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/cate/index_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Cate->index[ D:\phpstudy_pro\WWW\work\application\admin\controller\Cate.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\work\public/../application/admin\view\cate\index.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002900s ] mysql:host=127.0.0.1;port=3306;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cate` [ RunTime:0.002139s ]
+[ sql ] [ SQL ] SELECT * FROM `cate` [ RunTime:0.001425s ]
+---------------------------------------------------------------
+[ 2019-11-04T21:29:10+08:00 ] 127.0.0.1 GET /admin/cate/add.html
+[ info ] www.work.com/admin/cate/add.html [运行时间：0.108262s][吞吐率：9.24req/s] [内存消耗：2,923.58kb] [文件加载：52]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'cate',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6124228608; Hm_lvt_080836300300be57b7f34f4b3e97d911=1566800100,1566833998; PHPSESSID=8jfd7mottp24pgcm3n30c45p67',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.work.com/admin/cate/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/cate/add_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Cate->add[ D:\phpstudy_pro\WWW\work\application\admin\controller\Cate.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\work\public/../application/admin\view\cate\create.html [ array (
+  0 => 'cate',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012306s ] mysql:host=127.0.0.1;port=3306;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cate` [ RunTime:0.049116s ]
+[ sql ] [ SQL ] SELECT * FROM `cate` [ RunTime:0.002296s ]
+---------------------------------------------------------------
+[ 2019-11-04T21:29:26+08:00 ] 127.0.0.1 POST /admin/cate/save.html
+[ info ] www.work.com/admin/cate/save.html [运行时间：0.091873s][吞吐率：10.88req/s] [内存消耗：2,454.16kb] [文件加载：46]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'cate',
+    2 => 'save',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6124228608; Hm_lvt_080836300300be57b7f34f4b3e97d911=1566800100,1566833998; PHPSESSID=8jfd7mottp24pgcm3n30c45p67',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.work.com/admin/cate/add.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://www.work.com',
+  'accept' => '*/*',
+  'content-length' => '71',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/cate/save_html' => '',
+  'pid' => '0',
+  'path' => '0,',
+  'cate_name' => '生活用品',
+  'is_lou' => '1',
+)
+[ info ] [ RUN ] app\admin\controller\Cate->save[ D:\phpstudy_pro\WWW\work\application\admin\controller\Cate.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010884s ] mysql:host=127.0.0.1;port=3306;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cate` [ RunTime:0.002131s ]
+[ sql ] [ SQL ] INSERT INTO `cate` (`pid` , `path` , `cate_name` , `is_lou`) VALUES (0 , '0,' , '生活用品' , 1) [ RunTime:0.047285s ]
+---------------------------------------------------------------
+[ 2019-11-04T21:29:26+08:00 ] 127.0.0.1 GET /admin/cate/index.html
+[ info ] www.work.com/admin/cate/index.html [运行时间：0.052461s][吞吐率：19.06req/s] [内存消耗：2,792.98kb] [文件加载：50]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'cate',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6124228608; Hm_lvt_080836300300be57b7f34f4b3e97d911=1566800100,1566833998; PHPSESSID=8jfd7mottp24pgcm3n30c45p67',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.work.com/admin/cate/add.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/cate/index_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Cate->index[ D:\phpstudy_pro\WWW\work\application\admin\controller\Cate.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\work\public/../application/admin\view\cate\index.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012283s ] mysql:host=127.0.0.1;port=3306;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cate` [ RunTime:0.002047s ]
+[ sql ] [ SQL ] SELECT * FROM `cate` [ RunTime:0.000776s ]
+---------------------------------------------------------------
+[ 2019-11-04T21:29:32+08:00 ] 127.0.0.1 GET /
+[ info ] www.work.com/ [运行时间：0.162103s][吞吐率：6.17req/s] [内存消耗：2,851.52kb] [文件加载：50]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6124228608; Hm_lvt_080836300300be57b7f34f4b3e97d911=1566800100,1566833998; PHPSESSID=8jfd7mottp24pgcm3n30c45p67',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\phpstudy_pro\WWW\work\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\work\public/../application/index\view\index\index.html [ array (
+  0 => 'data',
+  1 => 'cate',
+  2 => 'column',
+  3 => 'info',
+  4 => 'slider',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.034560s ] mysql:host=127.0.0.1;port=3306;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `column` [ RunTime:0.001934s ]
+[ sql ] [ SQL ] SELECT * FROM `column` ORDER BY `sort` [ RunTime:0.016204s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.002036s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001717s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `slider` [ RunTime:0.002623s ]
+[ sql ] [ SQL ] SELECT * FROM `slider` ORDER BY `sort` [ RunTime:0.001518s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cate` [ RunTime:0.002294s ]
+[ sql ] [ SQL ] SELECT * FROM `cate` [ RunTime:0.002082s ]
+[ sql ] [ SQL ] SELECT * FROM `cate` WHERE  `pid` = 0 [ RunTime:0.001669s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ads` [ RunTime:0.002051s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 3 [ RunTime:0.001453s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `goods` [ RunTime:0.001877s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 3 [ RunTime:0.001699s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 4 [ RunTime:0.001798s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 4 [ RunTime:0.002954s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 5 [ RunTime:0.002300s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 5 [ RunTime:0.001512s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 6 [ RunTime:0.001431s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 6 [ RunTime:0.002007s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 7 [ RunTime:0.001844s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 7 [ RunTime:0.001818s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 8 [ RunTime:0.002411s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 8 [ RunTime:0.002447s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 9 [ RunTime:0.001533s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 9 [ RunTime:0.001419s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 10 [ RunTime:0.001320s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 10 [ RunTime:0.001341s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 11 [ RunTime:0.001294s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 11 [ RunTime:0.001649s ]
+---------------------------------------------------------------
+[ 2019-11-04T21:29:39+08:00 ] 127.0.0.1 GET /admin/ads/index.html
+[ info ] www.work.com/admin/ads/index.html [运行时间：0.099458s][吞吐率：10.05req/s] [内存消耗：2,563.23kb] [文件加载：48]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ads',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6124228608; Hm_lvt_080836300300be57b7f34f4b3e97d911=1566800100,1566833998; PHPSESSID=8jfd7mottp24pgcm3n30c45p67',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.work.com/admin.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/ads/index_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Ads->index[ D:\phpstudy_pro\WWW\work\application\admin\controller\Ads.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\work\public/../application/admin\view\ads\index.html [ array (
+  0 => 'cate',
+  1 => 'ads',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003436s ] mysql:host=127.0.0.1;port=3306;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ads` [ RunTime:0.017098s ]
+[ sql ] [ SQL ] SELECT `ads`.*,`cate`.`cate_name` FROM `ads` INNER JOIN `cate` ON `cate`.`id`=`ads`.`c_id` [ RunTime:0.006035s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cate` [ RunTime:0.004421s ]
+[ sql ] [ SQL ] SELECT * FROM `cate` WHERE  `pid` = 0 [ RunTime:0.002692s ]
+---------------------------------------------------------------
+[ 2019-11-04T21:50:08+08:00 ] 127.0.0.1 GET /admin/column/index.html
+[ info ] www.work.com/admin/column/index.html [运行时间：0.075994s][吞吐率：13.16req/s] [内存消耗：2,543.28kb] [文件加载：48]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'column',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6124228608; Hm_lvt_080836300300be57b7f34f4b3e97d911=1566800100,1566833998; PHPSESSID=8jfd7mottp24pgcm3n30c45p67',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.work.com/admin.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/column/index_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Column->index[ D:\phpstudy_pro\WWW\work\application\admin\controller\Column.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\work\public/../application/admin\view\column\index.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012137s ] mysql:host=127.0.0.1;port=3306;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `column` [ RunTime:0.025903s ]
+[ sql ] [ SQL ] SELECT * FROM `column` [ RunTime:0.001577s ]
+---------------------------------------------------------------
+[ 2019-11-04T21:50:09+08:00 ] 127.0.0.1 GET /admin/comment/index.html
+[ info ] www.work.com/admin/comment/index.html [运行时间：0.040344s][吞吐率：24.79req/s] [内存消耗：2,540.95kb] [文件加载：48]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'comment',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6124228608; Hm_lvt_080836300300be57b7f34f4b3e97d911=1566800100,1566833998; PHPSESSID=8jfd7mottp24pgcm3n30c45p67',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.work.com/admin.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/comment/index_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Comment->index[ D:\phpstudy_pro\WWW\work\application\admin\controller\Comment.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\work\public/../application/admin\view\comment\index.html [ array (
+  0 => 'message',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002815s ] mysql:host=127.0.0.1;port=3306;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `comment` [ RunTime:0.002319s ]
+[ sql ] [ SQL ] SELECT `comment`.*,`user`.`user_name`,`goods`.`goods_name` FROM `comment` INNER JOIN `user` ON `user`.`id`=`comment`.`u_id` INNER JOIN `goods` ON `goods`.`id`=`comment`.`g_id` [ RunTime:0.002220s ]
+---------------------------------------------------------------
+[ 2019-11-04T21:50:10+08:00 ] 127.0.0.1 GET /admin/admin/index.html
+[ info ] www.work.com/admin/admin/index.html [运行时间：0.080169s][吞吐率：12.47req/s] [内存消耗：1,726.29kb] [文件加载：41]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'admin',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6124228608; Hm_lvt_080836300300be57b7f34f4b3e97d911=1566800100,1566833998; PHPSESSID=8jfd7mottp24pgcm3n30c45p67',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.work.com/admin.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/admin/index_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Admin->index[ D:\phpstudy_pro\WWW\work\application\admin\controller\Admin.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [0]致命错误: Class 'app\admin\controller\Auth' not found[D:\phpstudy_pro\WWW\work\application\admin\controller\Admin.php:20]
+---------------------------------------------------------------
+[ 2019-11-04T21:50:11+08:00 ] 127.0.0.1 GET /admin/user/index.html
+[ info ] www.work.com/admin/user/index.html [运行时间：0.034340s][吞吐率：29.12req/s] [内存消耗：2,480.17kb] [文件加载：47]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6124228608; Hm_lvt_080836300300be57b7f34f4b3e97d911=1566800100,1566833998; PHPSESSID=8jfd7mottp24pgcm3n30c45p67',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.work.com/admin.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/user/index_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\User->index[ D:\phpstudy_pro\WWW\work\application\admin\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\work\public/../application/admin\view\user\index.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002295s ] mysql:host=127.0.0.1;port=3306;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.001834s ]
+[ sql ] [ SQL ] SELECT * FROM `user` [ RunTime:0.001755s ]
+---------------------------------------------------------------
+[ 2019-11-04T21:50:12+08:00 ] 127.0.0.1 GET /admin/info/index.html
+[ info ] www.work.com/admin/info/index.html [运行时间：0.075869s][吞吐率：13.18req/s] [内存消耗：2,554.82kb] [文件加载：49]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'info',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6124228608; Hm_lvt_080836300300be57b7f34f4b3e97d911=1566800100,1566833998; PHPSESSID=8jfd7mottp24pgcm3n30c45p67',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.work.com/admin.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/info/index_html' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Info->index[ D:\phpstudy_pro\WWW\work\application\admin\controller\Info.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\work\public/../application/admin\view\info\index.html [ array (
+  0 => 'info',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.020769s ] mysql:host=127.0.0.1;port=3306;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.021993s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001678s ]
+---------------------------------------------------------------
+[ 2019-11-04T21:50:13+08:00 ] 127.0.0.1 GET /admin/user/index.html
+[ info ] www.work.com/admin/user/index.html [运行时间：0.036240s][吞吐率：27.59req/s] [内存消耗：2,480.17kb] [文件加载：47]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6124228608; Hm_lvt_080836300300be57b7f34f4b3e97d911=1566800100,1566833998; PHPSESSID=8jfd7mottp24pgcm3n30c45p67',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.work.com/admin.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/user/index_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\User->index[ D:\phpstudy_pro\WWW\work\application\admin\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\work\public/../application/admin\view\user\index.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002862s ] mysql:host=127.0.0.1;port=3306;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.002950s ]
+[ sql ] [ SQL ] SELECT * FROM `user` [ RunTime:0.001430s ]
+---------------------------------------------------------------
+[ 2019-11-04T21:50:15+08:00 ] 127.0.0.1 GET /admin/comment/index.html
+[ info ] www.work.com/admin/comment/index.html [运行时间：0.035480s][吞吐率：28.18req/s] [内存消耗：2,540.95kb] [文件加载：48]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'comment',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6124228608; Hm_lvt_080836300300be57b7f34f4b3e97d911=1566800100,1566833998; PHPSESSID=8jfd7mottp24pgcm3n30c45p67',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.work.com/admin.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/comment/index_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Comment->index[ D:\phpstudy_pro\WWW\work\application\admin\controller\Comment.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\work\public/../application/admin\view\comment\index.html [ array (
+  0 => 'message',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002198s ] mysql:host=127.0.0.1;port=3306;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `comment` [ RunTime:0.002563s ]
+[ sql ] [ SQL ] SELECT `comment`.*,`user`.`user_name`,`goods`.`goods_name` FROM `comment` INNER JOIN `user` ON `user`.`id`=`comment`.`u_id` INNER JOIN `goods` ON `goods`.`id`=`comment`.`g_id` [ RunTime:0.002218s ]
+---------------------------------------------------------------
+[ 2019-11-04T21:50:16+08:00 ] 127.0.0.1 GET /admin/ads/index.html
+[ info ] www.work.com/admin/ads/index.html [运行时间：0.045171s][吞吐率：22.14req/s] [内存消耗：2,563.23kb] [文件加载：48]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ads',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6124228608; Hm_lvt_080836300300be57b7f34f4b3e97d911=1566800100,1566833998; PHPSESSID=8jfd7mottp24pgcm3n30c45p67',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.work.com/admin.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/ads/index_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Ads->index[ D:\phpstudy_pro\WWW\work\application\admin\controller\Ads.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\work\public/../application/admin\view\ads\index.html [ array (
+  0 => 'cate',
+  1 => 'ads',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002575s ] mysql:host=127.0.0.1;port=3306;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ads` [ RunTime:0.003195s ]
+[ sql ] [ SQL ] SELECT `ads`.*,`cate`.`cate_name` FROM `ads` INNER JOIN `cate` ON `cate`.`id`=`ads`.`c_id` [ RunTime:0.002512s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cate` [ RunTime:0.001830s ]
+[ sql ] [ SQL ] SELECT * FROM `cate` WHERE  `pid` = 0 [ RunTime:0.001765s ]
+---------------------------------------------------------------
+[ 2019-11-04T21:50:17+08:00 ] 127.0.0.1 GET /admin/slider/index.html
+[ info ] www.work.com/admin/slider/index.html [运行时间：0.033340s][吞吐率：29.99req/s] [内存消耗：2,547.19kb] [文件加载：48]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'slider',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6124228608; Hm_lvt_080836300300be57b7f34f4b3e97d911=1566800100,1566833998; PHPSESSID=8jfd7mottp24pgcm3n30c45p67',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.work.com/admin.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/slider/index_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Slider->index[ D:\phpstudy_pro\WWW\work\application\admin\controller\Slider.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\work\public/../application/admin\view\slider\index.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002565s ] mysql:host=127.0.0.1;port=3306;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `slider` [ RunTime:0.001638s ]
+[ sql ] [ SQL ] SELECT * FROM `slider` [ RunTime:0.001104s ]
+---------------------------------------------------------------
+[ 2019-11-04T21:50:18+08:00 ] 127.0.0.1 GET /book.html
+[ info ] www.work.com/book.html [运行时间：0.018609s][吞吐率：53.74req/s] [内存消耗：1,317.46kb] [文件加载：34]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'book',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6124228608; Hm_lvt_080836300300be57b7f34f4b3e97d911=1566800100,1566833998; PHPSESSID=8jfd7mottp24pgcm3n30c45p67',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.work.com/admin.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+  '/book_html' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-11-04T21:50:19+08:00 ] 127.0.0.1 GET /admin/info/index.html
+[ info ] www.work.com/admin/info/index.html [运行时间：0.033786s][吞吐率：29.60req/s] [内存消耗：2,554.82kb] [文件加载：49]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'info',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6124228608; Hm_lvt_080836300300be57b7f34f4b3e97d911=1566800100,1566833998; PHPSESSID=8jfd7mottp24pgcm3n30c45p67',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.work.com/admin.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/info/index_html' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Info->index[ D:\phpstudy_pro\WWW\work\application\admin\controller\Info.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\work\public/../application/admin\view\info\index.html [ array (
+  0 => 'info',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001951s ] mysql:host=127.0.0.1;port=3306;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.001391s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000910s ]
+---------------------------------------------------------------
+[ 2019-11-04T21:50:37+08:00 ] 127.0.0.1 GET /admin/slider/index.html
+[ info ] www.work.com/admin/slider/index.html [运行时间：0.046239s][吞吐率：21.63req/s] [内存消耗：2,547.19kb] [文件加载：48]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'slider',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6124228608; Hm_lvt_080836300300be57b7f34f4b3e97d911=1566800100,1566833998; PHPSESSID=8jfd7mottp24pgcm3n30c45p67',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.work.com/admin.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/slider/index_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Slider->index[ D:\phpstudy_pro\WWW\work\application\admin\controller\Slider.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\work\public/../application/admin\view\slider\index.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002292s ] mysql:host=127.0.0.1;port=3306;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `slider` [ RunTime:0.001939s ]
+[ sql ] [ SQL ] SELECT * FROM `slider` [ RunTime:0.011122s ]
+---------------------------------------------------------------
+[ 2019-11-04T21:50:38+08:00 ] 127.0.0.1 GET /admin/ads/index.html
+[ info ] www.work.com/admin/ads/index.html [运行时间：0.101080s][吞吐率：9.89req/s] [内存消耗：2,563.23kb] [文件加载：48]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ads',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6124228608; Hm_lvt_080836300300be57b7f34f4b3e97d911=1566800100,1566833998; PHPSESSID=8jfd7mottp24pgcm3n30c45p67',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.work.com/admin.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/ads/index_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Ads->index[ D:\phpstudy_pro\WWW\work\application\admin\controller\Ads.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\work\public/../application/admin\view\ads\index.html [ array (
+  0 => 'cate',
+  1 => 'ads',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.043257s ] mysql:host=127.0.0.1;port=3306;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ads` [ RunTime:0.020030s ]
+[ sql ] [ SQL ] SELECT `ads`.*,`cate`.`cate_name` FROM `ads` INNER JOIN `cate` ON `cate`.`id`=`ads`.`c_id` [ RunTime:0.001315s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cate` [ RunTime:0.001662s ]
+[ sql ] [ SQL ] SELECT * FROM `cate` WHERE  `pid` = 0 [ RunTime:0.001699s ]
+---------------------------------------------------------------
+[ 2019-11-04T21:50:38+08:00 ] 127.0.0.1 GET /admin/comment/index.html
+[ info ] www.work.com/admin/comment/index.html [运行时间：0.064467s][吞吐率：15.51req/s] [内存消耗：2,540.95kb] [文件加载：48]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'comment',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6124228608; Hm_lvt_080836300300be57b7f34f4b3e97d911=1566800100,1566833998; PHPSESSID=8jfd7mottp24pgcm3n30c45p67',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.work.com/admin.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/comment/index_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Comment->index[ D:\phpstudy_pro\WWW\work\application\admin\controller\Comment.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\work\public/../application/admin\view\comment\index.html [ array (
+  0 => 'message',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002064s ] mysql:host=127.0.0.1;port=3306;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `comment` [ RunTime:0.028650s ]
+[ sql ] [ SQL ] SELECT `comment`.*,`user`.`user_name`,`goods`.`goods_name` FROM `comment` INNER JOIN `user` ON `user`.`id`=`comment`.`u_id` INNER JOIN `goods` ON `goods`.`id`=`comment`.`g_id` [ RunTime:0.002562s ]
+---------------------------------------------------------------
+[ 2019-11-04T21:50:39+08:00 ] 127.0.0.1 GET /admin/user/index.html
+[ info ] www.work.com/admin/user/index.html [运行时间：0.034493s][吞吐率：28.99req/s] [内存消耗：2,480.17kb] [文件加载：47]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6124228608; Hm_lvt_080836300300be57b7f34f4b3e97d911=1566800100,1566833998; PHPSESSID=8jfd7mottp24pgcm3n30c45p67',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.work.com/admin.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/user/index_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\User->index[ D:\phpstudy_pro\WWW\work\application\admin\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\work\public/../application/admin\view\user\index.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002352s ] mysql:host=127.0.0.1;port=3306;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.002594s ]
+[ sql ] [ SQL ] SELECT * FROM `user` [ RunTime:0.001158s ]
+---------------------------------------------------------------
+[ 2019-11-04T21:50:39+08:00 ] 127.0.0.1 GET /admin/admin/index.html
+[ info ] www.work.com/admin/admin/index.html [运行时间：0.021323s][吞吐率：46.90req/s] [内存消耗：1,726.29kb] [文件加载：41]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'admin',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6124228608; Hm_lvt_080836300300be57b7f34f4b3e97d911=1566800100,1566833998; PHPSESSID=8jfd7mottp24pgcm3n30c45p67',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.work.com/admin.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/admin/index_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Admin->index[ D:\phpstudy_pro\WWW\work\application\admin\controller\Admin.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [0]致命错误: Class 'app\admin\controller\Auth' not found[D:\phpstudy_pro\WWW\work\application\admin\controller\Admin.php:20]
+---------------------------------------------------------------
+[ 2019-11-04T21:50:43+08:00 ] 127.0.0.1 GET /admin/cate/index.html
+[ info ] www.work.com/admin/cate/index.html [运行时间：0.042326s][吞吐率：23.63req/s] [内存消耗：2,792.96kb] [文件加载：50]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'cate',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6124228608; Hm_lvt_080836300300be57b7f34f4b3e97d911=1566800100,1566833998; PHPSESSID=8jfd7mottp24pgcm3n30c45p67',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.work.com/admin.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/cate/index_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Cate->index[ D:\phpstudy_pro\WWW\work\application\admin\controller\Cate.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\work\public/../application/admin\view\cate\index.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001727s ] mysql:host=127.0.0.1;port=3306;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cate` [ RunTime:0.001611s ]
+[ sql ] [ SQL ] SELECT * FROM `cate` [ RunTime:0.001131s ]
+---------------------------------------------------------------
+[ 2019-11-04T21:50:43+08:00 ] 127.0.0.1 GET /add.html
+[ info ] www.work.com/add.html [运行时间：0.028322s][吞吐率：35.31req/s] [内存消耗：1,317.45kb] [文件加载：34]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'add',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6124228608; Hm_lvt_080836300300be57b7f34f4b3e97d911=1566800100,1566833998; PHPSESSID=8jfd7mottp24pgcm3n30c45p67',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.work.com/admin.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+  '/add_html' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-11-04T21:50:44+08:00 ] 127.0.0.1 GET /list.html
+[ info ] www.work.com/list.html [运行时间：0.018829s][吞吐率：53.11req/s] [内存消耗：1,317.46kb] [文件加载：34]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'list',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6124228608; Hm_lvt_080836300300be57b7f34f4b3e97d911=1566800100,1566833998; PHPSESSID=8jfd7mottp24pgcm3n30c45p67',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.work.com/admin.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+  '/list_html' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-11-04T21:50:45+08:00 ] 127.0.0.1 GET /admin/column/index.html
+[ info ] www.work.com/admin/column/index.html [运行时间：0.033997s][吞吐率：29.41req/s] [内存消耗：2,543.28kb] [文件加载：48]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'column',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6124228608; Hm_lvt_080836300300be57b7f34f4b3e97d911=1566800100,1566833998; PHPSESSID=8jfd7mottp24pgcm3n30c45p67',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.work.com/admin.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/column/index_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Column->index[ D:\phpstudy_pro\WWW\work\application\admin\controller\Column.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\work\public/../application/admin\view\column\index.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002596s ] mysql:host=127.0.0.1;port=3306;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `column` [ RunTime:0.001488s ]
+[ sql ] [ SQL ] SELECT * FROM `column` [ RunTime:0.000867s ]
+---------------------------------------------------------------
+[ 2019-11-04T21:50:46+08:00 ] 127.0.0.1 GET /admin/slider/index.html
+[ info ] www.work.com/admin/slider/index.html [运行时间：0.035949s][吞吐率：27.82req/s] [内存消耗：2,547.19kb] [文件加载：48]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'slider',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6124228608; Hm_lvt_080836300300be57b7f34f4b3e97d911=1566800100,1566833998; PHPSESSID=8jfd7mottp24pgcm3n30c45p67',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.work.com/admin.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/slider/index_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Slider->index[ D:\phpstudy_pro\WWW\work\application\admin\controller\Slider.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\work\public/../application/admin\view\slider\index.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002859s ] mysql:host=127.0.0.1;port=3306;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `slider` [ RunTime:0.002724s ]
+[ sql ] [ SQL ] SELECT * FROM `slider` [ RunTime:0.001575s ]
+---------------------------------------------------------------
+[ 2019-11-04T21:50:49+08:00 ] 127.0.0.1 GET /admin/ads/index.html
+[ info ] www.work.com/admin/ads/index.html [运行时间：0.042234s][吞吐率：23.68req/s] [内存消耗：2,563.23kb] [文件加载：48]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ads',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6124228608; Hm_lvt_080836300300be57b7f34f4b3e97d911=1566800100,1566833998; PHPSESSID=8jfd7mottp24pgcm3n30c45p67',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.work.com/admin.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+  '/admin/ads/index_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Ads->index[ D:\phpstudy_pro\WWW\work\application\admin\controller\Ads.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\work\public/../application/admin\view\ads\index.html [ array (
+  0 => 'cate',
+  1 => 'ads',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002274s ] mysql:host=127.0.0.1;port=3306;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ads` [ RunTime:0.001837s ]
+[ sql ] [ SQL ] SELECT `ads`.*,`cate`.`cate_name` FROM `ads` INNER JOIN `cate` ON `cate`.`id`=`ads`.`c_id` [ RunTime:0.001568s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cate` [ RunTime:0.001790s ]
+[ sql ] [ SQL ] SELECT * FROM `cate` WHERE  `pid` = 0 [ RunTime:0.001064s ]
+---------------------------------------------------------------
+[ 2019-11-04T22:47:48+08:00 ] 127.0.0.1 GET /
+[ info ] www.work.com/ [运行时间：0.844079s][吞吐率：1.18req/s] [内存消耗：2,851.52kb] [文件加载：50]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=6124228608; Hm_lvt_080836300300be57b7f34f4b3e97d911=1566800100,1566833998; PHPSESSID=8jfd7mottp24pgcm3n30c45p67',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\phpstudy_pro\WWW\work\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\work\public/../application/index\view\index\index.html [ array (
+  0 => 'data',
+  1 => 'cate',
+  2 => 'column',
+  3 => 'info',
+  4 => 'slider',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012419s ] mysql:host=127.0.0.1;port=3306;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `column` [ RunTime:0.002734s ]
+[ sql ] [ SQL ] SELECT * FROM `column` ORDER BY `sort` [ RunTime:0.001902s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.004215s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001885s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `slider` [ RunTime:0.002942s ]
+[ sql ] [ SQL ] SELECT * FROM `slider` ORDER BY `sort` [ RunTime:0.001621s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cate` [ RunTime:0.002713s ]
+[ sql ] [ SQL ] SELECT * FROM `cate` [ RunTime:0.002010s ]
+[ sql ] [ SQL ] SELECT * FROM `cate` WHERE  `pid` = 0 [ RunTime:0.002227s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ads` [ RunTime:0.002737s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 3 [ RunTime:0.001515s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `goods` [ RunTime:0.031596s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 3 [ RunTime:0.002426s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 4 [ RunTime:0.002322s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 4 [ RunTime:0.001786s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 5 [ RunTime:0.002239s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 5 [ RunTime:0.001888s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 6 [ RunTime:0.001340s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 6 [ RunTime:0.001520s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 7 [ RunTime:0.001436s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 7 [ RunTime:0.001475s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 8 [ RunTime:0.001997s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 8 [ RunTime:0.001415s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 9 [ RunTime:0.001539s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 9 [ RunTime:0.001731s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 10 [ RunTime:0.002252s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 10 [ RunTime:0.001440s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 11 [ RunTime:0.001438s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 11 [ RunTime:0.001476s ]

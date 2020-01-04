@@ -1,0 +1,235 @@
+{include file="public/header" /}
+<body>
+<div class="container">
+    <div class="panel panel-primary">
+        <form action="{:url('index/pay/index')}" method="post">
+        <h3>购物车页面</h3>
+            {if condition="!session('shop')"}
+
+
+          {else/}
+
+            <div class="panel panel-body panel-default">
+                <table class="table table-border" >
+                    <th><input type="checkbox" name="" class="checkall" >全选  </th>
+                    <th>商品信息  </th>
+                    <th style="width: 300px;">商品信息</th>
+                    <th>单价</th>
+                    <th>数量</th>
+                    <th>金额</th>
+                    <th>操作</th>
+                    <?php  $tot=0;  ?>
+                    {volist name="data" id="val"}
+                    <?php
+                 $money=0;
+
+                ?>
+
+                    <tr style=" ">
+                        <td><input type="checkbox" name="goods[]" value="{$val.id}" class="check"></td>
+                        <td><a href="{:url('index/good/index',['id'=>$val.id])}"><img src="/upload/good/{$val['goodsinfo']['image']}" width="100px" height="100px" /></a></td>
+                        <td style="width: 300px;">{$val.goodsinfo.goods_description}</td>
+                        <td><span>{$val.goodsinfo.goods_price}</span></td>
+                        <td>
+
+                            <a class="btn btn-default plus" ads="{$val.goodsinfo.id}">+</a>
+                            <span>{$val.num}</span>
+                            <a class="btn btn-default minus" ads="{$val.goodsinfo.id}">-</a>
+                        </td>
+                        <td>
+                            <?php $money= $val['goodsinfo']['goods_price']*$val['num'];
+                              $tot+=$money;
+                           ?>
+                            <span class="numprice" >{$money}</span>
+                        </td>
+                        <td>
+                          <a class="btn btn-default" onclick="del(this,{$val.id})">移除购物车</a>
+
+                        </td>
+
+                    </tr>
+                    {/volist}
+
+
+                    <tr>
+                        <td><input type="checkbox" name="" class="checkall" >全选</td>
+                        <td>
+                            <a>删除</a>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td>总计<span class="nummoney">{$tot}</span> </td>
+                        <td>
+                            <input type="submit" value="结算" class="btn btn-danger">
+                        </td>
+                    </tr>
+                </table>
+        </form>
+
+        </div>
+        {/if}
+
+
+        </div>
+        <div class="panel panel-footer">
+            <table>
+
+
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+<script type="text/javascript">
+    //全选
+    $(".checkall").on("click",function(){
+        if(this.checked==true)
+        {
+
+            $(".check").prop("checked",true);
+            $(".checkall").prop("checked",true);
+        }
+        else
+        {
+            $(".check").prop("checked",false);
+            $(".checkall").prop("checked",false);
+        }
+
+    });
+    //单选
+    $(".check").click(function(){
+        var check=$(".check").length;
+        //alert(check);
+        var checked=$(".check:checked").length;
+        if(check==checked)
+        {
+            $(".checkall").prop("checked",true);
+
+        }
+        else
+        {
+            $(".checkall").prop("checked",false);
+        }
+    });
+
+    //购物车加
+    //  var tot=0;
+    var totnum=0;
+    $(".plus").on("click",function(){
+        //  ;
+
+        var id=$(this).attr("ads");
+
+     //  alert(id);
+        obj=$(this);
+        $.post("{:url('index/car/addnum')}",{id:id},function (data) {
+         //  alert(data);
+            if(data==1)
+            {
+                var num=Number( obj.next().html());
+                num++;
+                obj.next().html(num);
+                //金额
+                var price=Number(obj.parent().prev().children().html());
+                //
+                var pricenum=Number(num)*Number(price);
+                obj.parent().next().children().html(pricenum);
+                checknum();
+
+            }
+
+        });
+
+
+
+
+
+
+
+
+        //alert(num);
+
+        //alert(1);
+    });
+    //购物车减
+    $(".minus").on("click",function(){
+
+        var id=$(this).attr('ads');
+     //   alert(id);
+        obj=$(this);
+         // alert(id);
+        //发送ajax请求
+        $.get("{:url('index/car/numjian')}",{id:id},function(data){
+              if(data==1)
+              {
+                  var num=Number(obj.prev().html());
+                  if(num>1)
+                  {
+                      num--;
+                      obj.prev().html(num);
+                      var price=Number(obj.parent().prev().children().html());
+                      var pricenum=Number(num)*Number(price);
+                      obj.parent().next().children().html(pricenum);
+                  }
+                  else
+                  {
+                      alert("不能再减下去了");
+                  }
+
+                  checknum();
+
+              }
+              else
+              {
+                  alert("不能再减了");
+              }
+        });
+
+    });
+    //金额
+    function checknum()
+    {
+        var zong=0;
+        $(".numprice").each(function(){
+            var num=Number($(this).html());
+            zong+=num;
+        });
+        $(".nummoney").html(zong);
+    }
+
+
+
+
+
+    /*   $(".check").prop("checked",true);
+       if($(this).checked==true)
+        {
+         $(".check").prop("checked",true);
+        }
+        else
+        {
+        	$(".check").prop("checked",false);
+        }
+        alert(1);*/
+
+    function del(obj,id)
+    {
+      //alert(id);
+        // alert(g_id);
+       // alert(id);
+        $.get("{:url('index/car/del')}",{id:id},function (data) {
+            if(data==1)
+            {
+                $(obj).parent().parent().remove();
+                checknum();
+            }
+
+        });
+
+
+    }
+
+
+</script>

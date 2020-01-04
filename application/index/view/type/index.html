@@ -1,0 +1,120 @@
+{include file="public/header" /}
+
+<!-- 导航轮播-->
+<div  class="row" >
+    <div id="dao" >
+        {volist name="cate " id="value"}
+        {if condition="$value['level']==1"}
+        <div class="dao_one">
+            <div class="one"><a href="{:url('index/type/index',['id'=>$value['id']])}" >{$value.cate_name}</a></div>
+
+            <div class="dao_two">
+                {volist name="cate " id="valu"}
+                {if condition=" $valu['pid']==$value['id']"}
+                <div class="two"><a href="{:url('index/type/index',['id'=>$valu.id])}">{$valu.cate_name}</a>
+                    <div class="dao_three">
+                        {volist name="cate" id="val"}
+                        {if condition="$val['pid']==$valu['id']"}
+                        <div class="three">{$val.cate_name}</div>
+                        {/if}
+                        {/volist}
+
+                    </div>
+                </div>
+                {/if}
+                {/volist}
+
+            </div>
+
+
+
+        </div>
+        {/if}
+        {/volist}
+
+
+
+    </div>
+
+
+
+    <div  class="row" style="margin-top: 150px;">
+       <div class="panel panel-head">
+           <h3>商品列表</h3>
+           <div class="panel panel-default" >
+               {volist name="goods" id="value"}
+                  <div class="col-md-3" style="text-align: center;">
+                      <a href="{:url('index/good/index',['id'=>$value['id']])}" >
+                      <img src="/upload/good/{$value['image']}" height="220px;" width="220px;">
+                      <h5>{$value['goods_name']}</h5>
+                      <h6>{$value['goods_price']}</h6>
+                      </a>
+                  </div>
+
+               {/volist}
+
+
+           </div>
+       </div>
+
+
+    </div>
+
+
+</div>
+
+{include file="public/footer" /}
+
+
+
+<script type="text/javascript">
+
+    /* $('.one').mousemove(function(){
+      $(this).next().show();
+
+      $(this).next().mousemove(function(){
+        $(this).show();
+      });
+     });
+
+      $('.one').mouseout(function(){
+      $(this).next().hide();
+       $(this).next().mouseout(function(){
+        $(this).hide();
+       });
+     });
+
+      $('.two').mousemove(function(){
+        $(this).children().show();
+
+
+      });
+      $('.two').mouseout(function(){
+        $(this).children().hide();
+
+      });
+
+  */
+    $('.one').mouseout(function () {
+        $(this).next().css('display',"none");
+        $(this).next().mousemove(function () {
+            $(this).css('display','block');
+        });
+        //  alert(1);
+    });
+    $('.one').mousemove(function () {
+        $(this).next().css('display','block');
+        $(this).next().mouseout(function () {
+            $(this).css('display','none');
+        });
+    });
+    $('.two').mousemove(function(){
+        $(this).find('div').show();
+    });
+    $('.two').mouseout(function(){
+        $(this).find('div').hide();
+    });
+
+</script>
+
+

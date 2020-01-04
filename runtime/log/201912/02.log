@@ -1,0 +1,273 @@
+---------------------------------------------------------------
+[ 2019-12-02T09:05:00+08:00 ] 127.0.0.1 GET /
+[ info ] www.work.com/ [运行时间：2.303334s][吞吐率：0.43req/s] [内存消耗：1,340.51kb] [文件加载：34]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'error',
+    1 => '500',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=3069371392',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3732.400 QQBrowser/10.5.3819.400',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+  '/error/500_html' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-12-02T09:06:19+08:00 ] 127.0.0.1 GET /
+[ info ] www.work.com/ [运行时间：12.596368s][吞吐率：0.08req/s] [内存消耗：2,861.79kb] [文件加载：50]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=3069371392',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3732.400 QQBrowser/10.5.3819.400',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\phpstudy_pro\WWW\work\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\work\public/../application/index\view\index\index.html [ array (
+  0 => 'data',
+  1 => 'cate',
+  2 => 'column',
+  3 => 'info',
+  4 => 'slider',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.020657s ] mysql:host=127.0.0.1;port=3306;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `column` [ RunTime:0.002811s ]
+[ sql ] [ SQL ] SELECT * FROM `column` ORDER BY `sort` [ RunTime:0.107967s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:1.761434s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE  `id` = 1 LIMIT 1 [ RunTime:1.242964s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `slider` [ RunTime:0.347348s ]
+[ sql ] [ SQL ] SELECT * FROM `slider` ORDER BY `sort` [ RunTime:0.001221s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cate` [ RunTime:0.143668s ]
+[ sql ] [ SQL ] SELECT * FROM `cate` [ RunTime:0.001862s ]
+[ sql ] [ SQL ] SELECT * FROM `cate` WHERE  `pid` = 0 [ RunTime:0.002723s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `goods` [ RunTime:0.302864s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 3 [ RunTime:0.105574s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ads` [ RunTime:0.302730s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 3 [ RunTime:0.001343s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 3 [ RunTime:0.001051s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 6 [ RunTime:0.001283s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 4 [ RunTime:0.001221s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 4 [ RunTime:0.001167s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 7 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 5 [ RunTime:0.001003s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 5 [ RunTime:0.000884s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 4 [ RunTime:0.000600s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 6 [ RunTime:0.000731s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 6 [ RunTime:0.000780s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 8 [ RunTime:0.000537s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 7 [ RunTime:0.000564s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 7 [ RunTime:0.000573s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 9 [ RunTime:0.000402s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 8 [ RunTime:0.000565s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 8 [ RunTime:0.000417s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 5 [ RunTime:0.000481s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 9 [ RunTime:0.000465s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 9 [ RunTime:0.000704s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 10 [ RunTime:0.000388s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 10 [ RunTime:0.000446s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 10 [ RunTime:0.000570s ]
+---------------------------------------------------------------
+[ 2019-12-02T09:07:20+08:00 ] 127.0.0.1 GET /index/type/index/id/3.html
+[ info ] www.work.com/index/type/index/id/3.html [运行时间：2.893593s][吞吐率：0.35req/s] [内存消耗：2,819.13kb] [文件加载：50]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'type',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=3069371392; PHPSESSID=ijknnl0pg3rj2crk981tfdrf53',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.work.com/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3732.400 QQBrowser/10.5.3819.400',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+  '/index/type/index/id/3_html' => '',
+  'id' => '3',
+)
+[ info ] [ RUN ] app\index\controller\Type->index[ D:\phpstudy_pro\WWW\work\application\index\controller\Type.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\work\public/../application/index\view\type\index.html [ array (
+  0 => 'goods',
+  1 => 'cate',
+  2 => 'column',
+  3 => 'info',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013970s ] mysql:host=127.0.0.1;port=3306;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `column` [ RunTime:0.002662s ]
+[ sql ] [ SQL ] SELECT * FROM `column` ORDER BY `sort` DESC [ RunTime:0.025866s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.001395s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000469s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cate` [ RunTime:0.001175s ]
+[ sql ] [ SQL ] SELECT * FROM `cate` [ RunTime:0.000386s ]
+[ sql ] [ SQL ] SELECT * FROM `cate` WHERE  `id` = 3 LIMIT 1 [ RunTime:0.482477s ]
+[ sql ] [ SQL ] SELECT * FROM `cate` WHERE  `pid` = 3 [ RunTime:0.000853s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `goods` [ RunTime:0.002010s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` IN (6,7) [ RunTime:0.297232s ]
+---------------------------------------------------------------
+[ 2019-12-02T09:07:26+08:00 ] 127.0.0.1 GET /index/good/index/id/18.html
+[ info ] www.work.com/index/good/index/id/18.html [运行时间：1.099331s][吞吐率：0.91req/s] [内存消耗：2,574.23kb] [文件加载：48]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'good',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=3069371392; PHPSESSID=ijknnl0pg3rj2crk981tfdrf53',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.work.com/index/type/index/id/3.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3732.400 QQBrowser/10.5.3819.400',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+  '/index/good/index/id/18_html' => '',
+  'id' => '18',
+)
+[ info ] [ RUN ] app\index\controller\Good->index[ D:\phpstudy_pro\WWW\work\application\index\controller\Good.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\work\public/../application/index\view\good\index.html [ array (
+  0 => 'comment',
+  1 => 'images',
+  2 => 'info',
+  3 => 'column',
+  4 => 'goods',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010392s ] mysql:host=127.0.0.1;port=3306;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `goods` [ RunTime:0.002782s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `id` = 18 LIMIT 1 [ RunTime:0.000885s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `images` [ RunTime:0.080680s ]
+[ sql ] [ SQL ] SELECT * FROM `images` WHERE  `gid` = 18 [ RunTime:0.006604s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.003467s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000956s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `column` [ RunTime:0.002101s ]
+[ sql ] [ SQL ] SELECT * FROM `column` [ RunTime:0.000709s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `comment` [ RunTime:0.129103s ]
+[ sql ] [ SQL ] SELECT `comment`.*,`user`.`user_name` FROM `comment` INNER JOIN `user` ON `user`.`id`=`comment`.`u_id` WHERE  `g_id` = 18 [ RunTime:0.515330s ]
+---------------------------------------------------------------
+[ 2019-12-02T21:29:16+08:00 ] 127.0.0.1 GET /index/good/index/id/18.html
+[ info ] www.work.com/index/good/index/id/18.html [运行时间：2.113237s][吞吐率：0.47req/s] [内存消耗：2,574.56kb] [文件加载：48]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'good',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=3069371392; PHPSESSID=ijknnl0pg3rj2crk981tfdrf53',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.work.com/index/type/index/id/3.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3732.400 QQBrowser/10.5.3819.400',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+  '/index/good/index/id/18_html' => '',
+  'id' => '18',
+)
+[ info ] [ RUN ] app\index\controller\Good->index[ D:\phpstudy_pro\WWW\work\application\index\controller\Good.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\work\public/../application/index\view\good\index.html [ array (
+  0 => 'comment',
+  1 => 'images',
+  2 => 'info',
+  3 => 'column',
+  4 => 'goods',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.051732s ] mysql:host=127.0.0.1;port=3306;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `goods` [ RunTime:0.164807s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `id` = 18 LIMIT 1 [ RunTime:0.000659s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `images` [ RunTime:0.001154s ]
+[ sql ] [ SQL ] SELECT * FROM `images` WHERE  `gid` = 18 [ RunTime:0.038408s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.001534s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000558s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `column` [ RunTime:0.040469s ]
+[ sql ] [ SQL ] SELECT * FROM `column` [ RunTime:0.000553s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `comment` [ RunTime:0.002099s ]
+[ sql ] [ SQL ] SELECT `comment`.*,`user`.`user_name` FROM `comment` INNER JOIN `user` ON `user`.`id`=`comment`.`u_id` WHERE  `g_id` = 18 [ RunTime:0.001061s ]

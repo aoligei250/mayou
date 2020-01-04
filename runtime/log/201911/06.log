@@ -1,0 +1,145 @@
+---------------------------------------------------------------
+[ 2019-11-06T21:47:14+08:00 ] 127.0.0.1 GET /
+[ info ] www.work.com/ [运行时间：1.955585s][吞吐率：0.51req/s] [内存消耗：2,863.69kb] [文件加载：50]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=3069371392',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3732.400 QQBrowser/10.5.3819.400',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\phpstudy_pro\WWW\work\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\work\public/../application/index\view\index\index.html [ array (
+  0 => 'data',
+  1 => 'cate',
+  2 => 'column',
+  3 => 'info',
+  4 => 'slider',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.541155s ] mysql:host=127.0.0.1;port=3306;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `column` [ RunTime:0.507768s ]
+[ sql ] [ SQL ] SELECT * FROM `column` ORDER BY `sort` [ RunTime:0.039497s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.053658s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001850s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `slider` [ RunTime:0.003726s ]
+[ sql ] [ SQL ] SELECT * FROM `slider` ORDER BY `sort` [ RunTime:0.000882s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cate` [ RunTime:0.002561s ]
+[ sql ] [ SQL ] SELECT * FROM `cate` [ RunTime:0.000699s ]
+[ sql ] [ SQL ] SELECT * FROM `cate` WHERE  `pid` = 0 [ RunTime:0.040982s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ads` [ RunTime:0.002768s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 3 [ RunTime:0.000783s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `goods` [ RunTime:0.003377s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 3 [ RunTime:0.001405s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 4 [ RunTime:0.000666s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 4 [ RunTime:0.000591s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 5 [ RunTime:0.000584s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 5 [ RunTime:0.000553s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 6 [ RunTime:0.000572s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 6 [ RunTime:0.000631s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 7 [ RunTime:0.000599s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 7 [ RunTime:0.000600s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 8 [ RunTime:0.000564s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 8 [ RunTime:0.000590s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 9 [ RunTime:0.000514s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 9 [ RunTime:0.000581s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 10 [ RunTime:0.000566s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 10 [ RunTime:0.000574s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 11 [ RunTime:0.000487s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 11 [ RunTime:0.000525s ]
+---------------------------------------------------------------
+[ 2019-11-06T21:47:37+08:00 ] 127.0.0.1 GET /
+[ info ] www.work.com/ [运行时间：0.121218s][吞吐率：8.25req/s] [内存消耗：2,848.16kb] [文件加载：50]
+[ info ] [ LANG ] D:\phpstudy_pro\WWW\work\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=3069371392; PHPSESSID=t20pla5dn73ev1ej2th805rafo',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3732.400 QQBrowser/10.5.3819.400',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'www.work.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\phpstudy_pro\WWW\work\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy_pro\WWW\work\public/../application/index\view\index\index.html [ array (
+  0 => 'data',
+  1 => 'cate',
+  2 => 'column',
+  3 => 'info',
+  4 => 'slider',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003743s ] mysql:host=127.0.0.1;port=3306;dbname=shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `column` [ RunTime:0.004089s ]
+[ sql ] [ SQL ] SELECT * FROM `column` ORDER BY `sort` [ RunTime:0.001277s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.004950s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001285s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `slider` [ RunTime:0.003363s ]
+[ sql ] [ SQL ] SELECT * FROM `slider` ORDER BY `sort` [ RunTime:0.000966s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cate` [ RunTime:0.017375s ]
+[ sql ] [ SQL ] SELECT * FROM `cate` [ RunTime:0.000636s ]
+[ sql ] [ SQL ] SELECT * FROM `cate` WHERE  `pid` = 0 [ RunTime:0.000830s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `ads` [ RunTime:0.001361s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 3 [ RunTime:0.000691s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `goods` [ RunTime:0.001571s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 3 [ RunTime:0.000637s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 4 [ RunTime:0.000795s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 4 [ RunTime:0.000575s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 5 [ RunTime:0.000499s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 5 [ RunTime:0.000973s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 6 [ RunTime:0.001030s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 6 [ RunTime:0.000517s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 7 [ RunTime:0.000612s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 7 [ RunTime:0.000635s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 8 [ RunTime:0.000698s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 8 [ RunTime:0.000747s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 9 [ RunTime:0.000684s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 9 [ RunTime:0.000729s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 10 [ RunTime:0.000672s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 10 [ RunTime:0.000584s ]
+[ sql ] [ SQL ] SELECT * FROM `ads` WHERE  `c_id` = 11 [ RunTime:0.000614s ]
+[ sql ] [ SQL ] SELECT * FROM `goods` WHERE  `cate_id` = 11 [ RunTime:0.000603s ]

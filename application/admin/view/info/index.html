@@ -1,0 +1,159 @@
+
+{include file="public/static" /}
+<body>
+<div class="panel admin-panel">
+    <div class="panel-head"><strong><span class="icon-pencil-square-o"></span> 网站信息</strong></div>
+    <div class="body-content">
+        <form method="post" class="form-x" action="{:url('admin/info/save')}">
+            <div class="form-group">
+                <div class="label">
+                    <label>网站标题：</label>
+                </div>
+                <div class="field">
+                    <input type="text" class="input" name="web_title" value="{$info.web_title}" />
+                    <div class="tips"></div>
+                </div>
+            </div>
+            <div class="form-group" style="margin-left:50px;">
+                <label for="" class="col-sm-2 control-label" style="float: left;">网站LOGO</label>
+                
+                <div class="fileds" style="float: left">
+                    <input type="hidden" name="web_image" id="imgHidden">
+                    <input type="file" name=""  id="img">
+                    <br>
+                    <div id="main"></div>
+                    <div>
+                    <img src="/upload/info/{$info.web_image}" width="200px;">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="label">
+                    <label>网站域名：</label>
+                </div>
+                <div class="field">
+                    <input type="text" class="input" name="web_domain" value="{$info.web_domain}" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="label">
+                    <label>网站关键字：</label>
+                </div>
+                <div class="field">
+                    <input type="text" class="input" name="web_keywords" value="{$info.web_keywords}" />
+                    <div class="tips"></div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="label">
+                    <label>网站描述：</label>
+                </div>
+                <div class="field">
+                    <input type="text" class="input" name="web_description" value="{$info.web_description}" />
+                    <div class="tips"></div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="label">
+                    <label>联系人：</label>
+                </div>
+                <div class="field">
+                    <input type="text" class="input" name="web_man" value="{$info.web_man}" />
+                    <div class="tips"></div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="label">
+                    <label>手机：</label>
+                </div>
+                <div class="field">
+                    <input type="text" class="input" name="web_phone" value="{$info.web_phone}" />
+                    <div class="tips"></div>
+                </div>
+            </div>
+
+
+
+            <div class="form-group">
+                <div class="label">
+                    <label>QQ：</label>
+                </div>
+                <div class="field">
+                    <input type="text" class="input" name="web_qq" value="{$info.web_qq}" />
+                    <div class="tips"></div>
+                </div>
+            </div>
+
+
+
+
+            <div class="form-group">
+                <div class="label">
+                    <label>底部信息：</label>
+                </div>
+                <div class="field">
+                    <input type="text" class="input" name="web_info" value="{$info.web_info}" />
+                    <div class="tips"></div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="label">
+                    <label></label>
+                </div>
+                <div class="field">
+                    <a class="button bg-main icon-check-square-o" onclick="save()"> 提交</a>
+                </div>
+           </div>
+        </form>
+    </div>
+</div>
+</body></html>
+
+<script>
+    //    var ue = UE.getEditor('editor');
+
+
+    $('#img').uploadifive({
+        // 是否自动上传
+        'auto'             : true,
+        // 显示上传动画DIV
+        'queueID'          : 'main',
+        // 处理文件上传的地址
+        'uploadScript'     : "{:url('admin/info/upload')}",
+        // 文件上传框文字
+        "buttonText":"上传图片",
+        // 监听图片上传成功
+        'onUploadComplete' : function(file, data) {
+            // $("#main").find(".uploadifive-queue-item").remove();
+            // $("#main").append(`<img width='200px' src='/upload/tmp/${data}'>`);
+            $("#main").html("<img width='200px' src='/upload/info/"+data+"'>");
+            //      alert(data);
+            $("#imgHidden").val(data);
+        }
+    });
+
+    function save()
+    {
+       // alert(1);
+        var data=$(".form-x").serialize();
+      //  alert(data);
+        $.ajax({
+            "url":"{:url('admin/info/save')}",
+            "type":"post",
+            "data":data,
+            success:function (data) {
+             //   alert(data);
+                if(data==1)
+                {
+                    layer.msg("提交成功",{icon:6});
+                    window.location.reload();
+                }
+                else
+                {
+                    layer.msg(data,{icon:5});
+                }
+            }
+        });
+    }
+</script>

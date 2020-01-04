@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="renderer" content="webkit">
+    <title></title>
+    <link rel="stylesheet" href="/static/admin/css/pintuer.css">
+    <link rel="stylesheet" href="/static/admin/css/admin.css">
+    <script src="/static/admin/js/jquery.js"></script>
+    <script src="/static/admin/js/pintuer.js"></script>
+    <!--layer-->
+    <script src="/static/admin/layer/layer.js"></script>
+    <!-- 引入无刷新上传图片 -->
+    <!-- 引入无刷新上传图片 -->
+    <script src="/static/admin/up/jquery.uploadifive.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="/static/admin/up/uploadifive.css">
+</head>
+
+
+<div class="panel admin-panel margin-top" id="add">
+    <div class="panel-head"><strong><span class="icon-pencil-square-o"></span> 增加内容</strong></div>
+    <div class="body-content">
+        <form method="post" id="slider_form" class="form-x" action="{:url('admin/slider/update')}" enctype="multipart/form-data">
+            <div class="form-group">
+
+                <div class="label">
+                    <label>轮播图标题：</label>
+                </div>
+                <div class="field">
+                    <input type="text" class="input w50" value="{$olddata['slider_name']}" name="slider_name" data-validate="required:请输入标题" />
+                    <div class="tips"></div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="label">
+                    <label>轮播图url</label>
+                </div>
+                <div class="field">
+                    <input type="text" class="input w50" name="slider_url" value="{$olddata['slider_url']}"  />
+                    <div class="tips"></div>
+                </div>
+            </div>
+            <div class="form-group" style="margin-left:50px;">
+                <label for="" class="col-sm-2 control-label" style="float: left;">新闻图片</label>
+
+                <div class="fileds" style="float: left">
+                    <img src="/upload/slider/{$olddata['img']}" />
+                    <input type="hidden" name="img" id="imgHidden" value="{$olddata['img']}">
+                    <input type="file" name=""  id="img">
+                    <br>
+                    <div id="main"></div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="label">
+                    <label>排序：</label>
+                </div>
+                <div class="field">
+                    <input type="text" class="input w50" name="sort" value="{$olddata['sort']}"  data-validate="required:,number:排序必须为数字" />
+                    <input type="hidden"  value="{$olddata['id']}" name="id"/>
+                    <div class="tips"></div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="label">
+                    <label></label>
+                </div>
+                <div class="field">
+                    <button class="button bg-main icon-check-square-o" type="button" onclick="update(this,{$olddata['id']})"> 提交</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+
+    //修改数据函数
+    function update(obj,id)
+    {
+      //  alert(id);
+        var data=$('#slider_form').serializeArray();
+
+        $.ajax({
+            'type':'post',
+            'url':"{:url('admin/slider/update')}",
+            'data':data,
+
+            success:function (data){
+              if(data==1)
+              {
+                  layer.msg('修改成功',{icon:6});
+                  window.location.href="{:url('admin/slider/index')}";
+              }
+              else
+              {
+                  layer.msg('修改失败',{icon:5});
+                  window.location.href="{:url('admin/slider/index')}";
+              }
+
+            }
+        });
+
+    }
+
+    //    var ue = UE.getEditor('editor');
+
+
+    $('#img').uploadifive({
+        // 是否自动上传
+        'auto'             : true,
+        // 显示上传动画DIV
+        'queueID'          : 'main',
+        // 处理文件上传的地址
+        'uploadScript'     : "{:url('admin/slider/upload')}",
+        // 文件上传框文字
+        "buttonText":"上传图片",
+        // 监听图片上传成功
+        'onUploadComplete' : function(file, data) {
+            // $("#main").find(".uploadifive-queue-item").remove();
+            // $("#main").append(`<img width='200px' src='/upload/tmp/${data}'>`);
+            $("#main").html(`<img width='200px' src='/upload/slider/${data}'>`);
+
+            $("#imgHidden").val(data);
+        }
+    });
+</script>

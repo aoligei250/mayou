@@ -1,0 +1,118 @@
+  *{
+    padding: 0px;
+    margin:0px;
+  }
+  #menu{
+  width: 100%;
+  height:410px;
+   border: solid;
+
+ 
+  }
+  #goods{
+      width: 100%;
+      border: solid;
+      height: 600px;
+  }
+  #comment{
+      width: 100%;
+      height: auto;
+      border: solid;
+  }
+  .card{
+      width: 100%;
+      height: 40px;
+      border: solid;
+      text-align: center;
+      line-height: 40px;
+      margin-top: 30px;
+  }
+  .card ul li{
+      list-style: none;
+      float: left;
+      margin-left: 30px;
+
+  }
+
+
+  #dao{
+      width: 200px;
+      height: auto;
+      background: #101010;
+      float: left;
+      text-align: center;
+      color: #ccc;
+     }
+     .dao_one{
+      width: 200px;
+      height: 40px;
+      text-align: center;
+       
+     }
+     .one{
+      width: 200px;
+      height: 40px;
+      line-height: 40px;
+      
+
+     }
+     .dao_two{
+         width: 200px;
+         height: auto;
+         position: relative;
+         left: 200px;
+         top:-40px;
+         display: none;
+         background: #101010;
+         z-index: 3;
+
+     }
+     .two{
+      width: 200px;
+      height: 40px;
+      line-height: 40px;
+      border: #ccc 1px solid;
+         color: #ccc;
+     }
+     .dao_three{
+      width: 200px;
+      height: auto;
+      position: relative;
+      left: 200px;
+      top:-40px;
+         display:none;
+       background: #101010;
+      z-index: 3;
+
+     }
+     .three{
+      width: 200px;
+      height: 40px;
+      line-height: 40px;
+      border: 1px solid #ccc;
+
+     }
+   
+   #slider{
+     width: 900px;
+     height: 400px;
+     float: right;
+  }
+  body {
+        padding-top: 70px;
+      }
+  .row a{
+    text-decoration: none;
+    color: black;
+  }
+  .row a:hover{
+    color: #ccc;
+  }
+  #dao a{
+    text-decoration: none;
+  color: #ccc;
+
+  }
+  #dao a:hover{
+    color: white;
+  }

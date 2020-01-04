@@ -1,0 +1,121 @@
+{include file="public/static" /}
+<div class="panel admin-panel">
+    <div class="panel-head"><strong class="icon-reorder"> 内容列表</strong></div>
+    <div class="padding border-bottom">
+        <a class="button border-yellow" href=""><span class="icon-plus-square-o"></span> 添加内容</a>
+    </div>
+    <table class="table table-hover text-center">
+        <tr>
+            <th width="5%">ID</th>
+            <th>栏目名称</th>
+            <th>跳转地址</th>
+            <th>排序</th>
+            <th width="250">操作</th>
+        </tr>
+        {volist name="data" id="val"}
+        <tr>
+            <td>{$val.id}</td>
+            <td>{$val.column_name}</td>
+            <td>{$val.url}</td>
+            <td>{$val.sort}</td>
+            <td>
+                <div class="button-group">
+                    <a type="button" class="button border-main" href="{:url('admin/column/edit',['id'=>$val.id])}"><span class="icon-edit"></span>修改</a>
+                    <a class="button border-red" href="javascript:void(0)" onclick="return del(this,{$val.id})"><span class="icon-trash-o"></span> 删除</a>
+                </div>
+            </td>
+        </tr>
+        {/volist}
+
+
+
+    </table>
+</div>
+<script>
+    function del(obj,id){
+       layer.confirm("您确定要删除吗",{icon:3,title:"提示"},function () {
+        //  alert(id);
+           $.get("{:url('admin/column/del')}",{id:id},function (data) {
+               if(data==1)
+               {
+                   layer.msg("删除成功",{icon:6});
+                   $(obj).parent().parent().parent().remove();
+               }
+               else
+               {
+                   layer.msg("删除失败",{icon:5});
+               }
+           })
+       })
+    }
+</script>
+<div class="panel admin-panel margin-top">
+    <div class="panel-head" id="add"><strong><span class="icon-pencil-square-o"></span>增加内容</strong></div>
+    <div class="body-content">
+        <form method="post" class="form-x" id="form-x" action="">
+
+            <div class="form-group">
+                <div class="label">
+                    <label>栏目名称：</label>
+                </div>
+                <div class="field">
+                    <input type="text" class="input w50" name="column_name" value="" data-validate="required:请输入标题" />
+                    <div class="tips"></div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="label">
+                    <label>栏目跳转</label>
+                </div>
+                <div class="field">
+                    <input type="text" class="input w50" name="url" value="" data-validate="required:请输入跳转地址" />
+                    <div class="tips"></div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="label">
+                    <label>排序：</label>
+                </div>
+                <div class="field">
+                    <input type="text" class="input w50" name="sort" value="0"  data-validate="required:,number:排序必须为数字" />
+                    <div class="tips"></div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="label">
+                    <label></label>
+                </div>
+                <div class="field">
+                    <button class="button bg-main icon-check-square-o" type="submit" onclick="save()"> 提交</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</body></html>
+<script>
+    function save() {
+        var data=$("#form-x").serialize();
+        alert(data);
+        $.ajax({
+            'url':"{:url('admin/column/save')}",
+            'type':'post',
+            'data':data,
+            success:function (data) {
+                 if(data==1)
+                 {
+                     layer.msg('添加成功',{icon:6});
+                     window.location.reload();
+                 }
+                 else
+                 {
+                     layer.msg(data,{icon:5});
+                 }
+
+             }
+        });
+    }
+
+
+</script>

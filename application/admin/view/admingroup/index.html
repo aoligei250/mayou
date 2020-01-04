@@ -1,0 +1,150 @@
+{include file="public/static" /}
+<div class="panel admin-panel">
+    <div class="panel-head"><strong class="icon-reorder"> 内容列表</strong></div>
+    <div class="padding border-bottom">
+        <a class="button border-yellow" href=""><span class="icon-plus-square-o"></span> 添加内容</a>
+    </div>
+    <table class="table table-hover text-center">
+        <tr>
+            <th width="5%">ID</th>
+            <th>用户组名称</th>
+            <th>用户组状态</th>
+            <th width="250">操作</th>
+        </tr>
+        {volist name="admingroup" id="val"}
+        <tr>
+            <td>{$val.id}</td>
+            <td>{$val.title}</td>
+
+            <td>
+                {if condition="$val.status==1"}
+                <a class="button button-little bg-green" ><span ></span> 启用</a>
+                {else/}
+                <a class="button button-little bg-red" ><span ></span> 禁用</a>
+                {/if}
+
+
+            </td>
+            <td>
+                <div class="button-group">
+                    <a type="button"  class="button border-main" href="{:url('admin/admingroup/edit',['id'=>$val.id])}"><span class="icon-edit"></span>修改</a>
+                    <a class="button border-red" href="javascript:void(0)" onclick="return del(this,{$val.id})"><span class="icon-trash-o"></span> 删除</a>
+                </div>
+            </td>
+        </tr>
+        {/volist}
+
+
+
+
+
+
+    </table>
+</div>
+<script>
+    function del(obj,id){
+        layer.confirm("您确定要删除吗",{icon:3,title:"提示"},function () {
+            //  alert(id);
+            $.get("{:url('admin/admin/del')}",{id:id},function (data) {
+                if(data==1)
+                {
+                    layer.msg("删除成功",{icon:6});
+                    $(obj).parent().parent().parent().remove();
+                }
+                else
+                {
+                    layer.msg("删除失败",{icon:5});
+                }
+            })
+        })
+    }
+</script>
+<div class="panel admin-panel margin-top">
+    <div class="panel-head" id="add"><strong><span class="icon-pencil-square-o"></span>增加内容</strong></div>
+    <div class="body-content">
+        <form method="post" class="form-x" id="form-x" action="">
+
+            <div class="form-group">
+                <div class="label">
+                    <label>用户组名称</label>
+                </div>
+                <div class="field">
+                    <input type="text" class="input w50" name="title" value=""  />
+                    <div class="tips"></div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="label">
+                    <label>用户组状态</label>
+                </div>
+                <div class="field">
+                    <input type="radio" checked="checked" name="status" value="1"  />开启
+                <br/>
+                    <input type="radio"  name="status" value="0">禁用
+                    <div class="tips"></div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="label">
+                    <label>权限选择</label>
+                </div>
+                <div class="field">
+                    {volist name="data" id="val"}
+                    <label>
+
+                    <?php
+
+                  echo str_repeat("|---",$val['level']); ?>
+                        <input     type="checkbox" class="checkbox-parent {if condition="$val['level'] neq 0"} checkbox-child {/if}" name="rules[]" value="{$val.id}"  >
+                        <span >{$val.name}</span>
+                    </label>
+                    <br/>
+                    {/volist}
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <div class="label">
+                    <label></label>
+                </div>
+                <div class="field">
+                    <button class="button bg-main icon-check-square-o" type="button" onclick="save()"> 提交</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</body></html>
+<script>
+    function save() {
+        var data=$("#form-x").serialize();
+       // alert(data);
+        $.ajax({
+            'url':"{:url('admin/admingroup/save')}",
+            'type':'post',
+            'data':data,
+            success:function (data) {
+                if(data==1)
+                {
+                    layer.msg('添加成功',{icon:6});
+                    window.location.reload();
+                }
+                else
+                {
+                    layer.msg(data,{icon:5});
+                }
+
+            }
+        });
+    }
+
+    function par(obj,id) {
+       // alert(id);
+        $.get("{:url('admin/adminrule/par')}",{id:id},function (data) {
+            alert(data);
+        })
+    }
+
+
+</script>

@@ -1,0 +1,159 @@
+{include file="public/static" /}
+<div class="panel admin-panel margin-top">
+    <div class="panel-head" id="add"><strong><span class="icon-pencil-square-o"></span>增加内容</strong></div>
+    <div class="body-content">
+        <form method="post" class="form-x" id="form-x" action="">
+
+            <div class="form-group">
+                <div class="label">
+                    <label>广告名称：</label>
+                </div>
+                <div class="field">
+                    <input type="text" class="input w50" name="ads_name" value="{$olddata['ads_name']}" />
+                    <div class="tips"></div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="label">
+                    <label>广告所属分类：</label>
+                </div>
+                <div class="field">
+                    <select name="c_id" class="input">
+
+                        <option >所属分类</option>
+                        {volist name="cate" id="val"}
+                        {if condition="$val['id']==$olddata['c_id']"}
+
+                        <option selected value="{$val.id}">{$val.cate_name}</option>
+
+                        {else/}
+                        {if condition="$val['level']==1"}
+                        <option  value="{$val.id}">{$val.cate_name}</option>
+                        {else/}
+                        <option disabled value="{$val.id}">{$val.cate_name}</option>
+                        {/if}
+                        {/if}
+                        {/volist}
+                    </select>
+                    <div class="tips"></div>
+                </div>
+            </div>
+            <div class="form-group" style="margin-left:50px;">
+                <label for="" class="col-sm-2 control-label" style="float: left;">广告图片</label>
+
+                <div class="fileds" style="float: left">
+                    <input type="hidden" name="ads_image" id="imgHidden">
+                    <input type="file" name=""  id="img">
+                    <br>
+                    <div id="main"></div>
+                    <img src="/upload/ads/{$olddata['ads_image']}" width="200px;">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="label">
+                    <label>广告描述：</label>
+                </div>
+                <div class="field">
+                    <input type="text" class="input w50" name="ads_description" value="{$olddata['ads_description']}" />
+                    <div class="tips"></div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="label">
+                    <label>广告跳转</label>
+                </div>
+                <div class="field">
+                    <input type="text" class="input w50" name="ads_url" value="{$olddata['ads_url']}" data-validate="required:请输入跳转地址" />
+                    <div class="tips"></div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="label">
+                    <label>广告排序：</label>
+                </div>
+                <div class="field">
+                    <input type="text" class="input w50" name="ads_sort" value="{$olddata['ads_sort']}"  data-validate="required:,number:排序必须为数字" />
+                    <div class="tips"></div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="label">
+                    <label>广告是否显示：</label>
+                </div>
+                <div class="field" >
+                    {if condition="$olddata['is_lou']==1" }
+                    <input type="radio"  checked name="is_lou" value="1" />是
+                    <input type="radio"  name="is_lou" value="0" />否
+                    {else/}
+                    <input type="radio"   name="is_lou" value="1" />是
+                    <input type="radio"  checked name="is_lou" value="0" />否
+                    {/if}
+
+
+                </div>
+
+
+                <div class="tips"></div>
+            </div>
+    </div>
+    <div class="form-group">
+        <div class="label">
+            <label></label>
+        </div>
+        <div class="field">
+            <input type="hidden" name="id" value="{$olddata['id']}" >
+            <a class="button bg-main icon-check-square-o"   onclick="update()"> 提交</a>
+        </div>
+    </div>
+    </form>
+</div>
+</div>
+</body></html>
+<script>
+    //    var ue = UE.getEditor('editor');
+
+
+    $('#img').uploadifive({
+        // 是否自动上传
+        'auto'             : true,
+        // 显示上传动画DIV
+        'queueID'          : 'main',
+        // 处理文件上传的地址
+        'uploadScript'     : "{:url('admin/ads/upload')}",
+        // 文件上传框文字
+        "buttonText":"上传图片",
+        // 监听图片上传成功
+        'onUploadComplete' : function(file, data) {
+            // $("#main").find(".uploadifive-queue-item").remove();
+            // $("#main").append(`<img width='200px' src='/upload/tmp/${data}'>`);
+            $("#main").html("<img width='200px' src='/upload/ads/"+data+"'>");
+            //      alert(data);
+            $("#imgHidden").val(data);
+        }
+    });
+
+    function update() {
+    //  alert(id);
+        var  data=$('.form-x').serialize();
+       // alert(data);
+        $.ajax({
+            "url":"{:url('admin/ads/update')}",
+            "type":"post",
+            "data":data,
+            success:function (data) {
+             //   alert(data);
+                if(data==1)
+                {
+                    layer.msg('修改成功',{icon:6});
+                    window.location.href="{:url('admin/ads/index')}";
+                }
+                else
+                {
+                    layer.msg(data,{icon:5});
+
+                }
+            }
+        });
+    }
+</script>

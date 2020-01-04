@@ -1,0 +1,141 @@
+{include file="public/header" /}
+<body>
+<div class="container">
+    <form action="{:url('index/pay/order')}" method="post">
+    <div class="panel panel-head panel-primary">
+        <h4>请填写并核对一下信息</h4>
+        <div class="panel panel-default panel-body">
+            <form>
+                <div class="form-group">
+                    {volist name="addr" id="val"}
+
+                    <input type="radio"  checked name="a_id" value="{$val.id}"><span>{$val.user_name}</span>
+                    <span>收货地址：</span>
+                    <span>{$val.addrinfo}</span>
+                    <span>收件人电话</span>
+                    <span>{$val.phone}</span>
+                    <br/>
+                    {/volist}
+                    <br/>
+                    <a class="addr btn btn-primary" onclick="addr(this)"  style="margin-top: 20px;">添加收货地址</a>
+                    <div id="addr" style="display: none;position: absolute;width: auto;height: auto;margin-left: 20%;">
+                        <div class="modal-dialog" style="margin-top: 10%;">
+                            <div class="modal-content">
+                                <div class="modal-header">
+
+                                    <h4 class="modal-title text-center" id="myModalLabel">添加收货地址</h4>
+                                </div>
+                                <form class="form-x"  >
+                                    <div class="modal-body" id = "model-body">
+                                        <div class="form-group">
+
+                                            <input type="text" class="form-control" name="addrinfo" placeholder="收件人地址" autocomplete="off">
+                                        </div>
+                                        <div class="form-group">
+                                          <input type="hidden" value="1" name="qwe">
+                                            <input type="password" class="form-control" name="phone" placeholder="收件人电话" autocomplete="off">
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <div class="form-group">
+                                            <a type="button" onclick="addaddr()" class="btn btn-primary form-control">添加</a>
+                                        </div>
+                                        <div class="form-group">
+
+                                        </div>
+
+                                    </div>
+                                </form>
+                            </div><!-- /.modal-content -->
+                        </div>
+                    </div>
+                </div>
+                <script>
+                       function addr(obj) {
+                           $("#addr").toggle();
+                       }
+                       function addaddr() {
+                       //    alert(1);
+                        var phone= $("input[name=phone]").val();
+                        var addrinfo=$("input[name=addrinfo]").val();
+                        //   alert(phone);
+                         $.post("{:url('index/login/addaddr')}",{phone:phone,addrinfo:addrinfo},function(data){
+                          //   alert(data);
+                             if (data==1)
+                             {
+                                 layer.msg("添加成功",{icon:6});
+                                 window.reload();
+                             }
+                             else
+                             {
+                                 layer.msg("添加失败");
+                             }
+                         });
+                       }
+
+
+                </script>
+                <div class="form-group">
+                    <p>支付方式:</p>
+                    <p style="margin-left: 30px;">在线支付</p>
+                </div>
+                <div>
+                    <p>发票信息:</p>
+                    <p><span>发票抬头：个人</span><span>发票类型：电子发票</span></p>
+                </div>
+            </form>
+        </div>
+        <div class="panel-body panel">
+            <h4>确认商品</h4>
+         <div class="panel-body panel panel-info">
+            <table class="table table-bordered">
+               <th>商品图片</th>
+                <th>商品名称</th>
+                <th>商品单价</th>
+                <th>商品数量</th>
+                <th>商品金额</th>
+                <?php $money=0; ?>
+                  {volist name="goods" id="val"}
+                    <tr>
+                        <input type="hidden" name="goods[]" value="{$val['id']}">
+                        <td>
+                            <img src="/upload/good/{$val['goodsinfo']['image']}" width="200px;" height="200px;">
+                        </td>
+                        <td>
+                            {$val['goodsinfo']['goods_name']}
+                        </td>
+                        <td>
+                            {$val['goodsinfo']['goods_price']}
+                        </td>
+                        <td>
+                            <input type="hidden" name="nums[]" value="{$val['num']}">
+                            {$val['num']}
+                        </td>
+                        <?php
+                          $tot=$val['goodsinfo']['goods_price']*$val['num'];
+                          $money+=$tot;
+                           ?>
+                        <td>
+
+                            {$tot}
+                            <input type="hidden" name="prices[]" value="{$tot}">
+                        </td>
+                    </tr>
+                {/volist}
+
+            </table>
+         </div>
+            <div class="panel panel-footer ">
+                <div style="float: right;">
+
+                <span>总金额：</span><span>{$money}</span>
+                <input class="btn btn-danger" type="submit" value="生成订单">
+                </div>
+            </div>
+        </div>
+    </div>
+    </form>
+</div>
+
+</body>
+</html>

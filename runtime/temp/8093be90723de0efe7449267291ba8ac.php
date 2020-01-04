@@ -1,0 +1,197 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:83:"C:\phpStudy\PHPTutorial\WWW\work\public/../application/admin\view\slider\index.html";i:1568473300;}*/ ?>
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="renderer" content="webkit">
+    <title></title>
+    <link rel="stylesheet" href="/static/admin/css/pintuer.css">
+    <link rel="stylesheet" href="/static/admin/css/admin.css">
+    <script src="/static/admin/js/jquery.js"></script>
+    <script src="/static/admin/js/pintuer.js"></script>
+    <!--layer-->
+    <script src="/static/admin/layer/layer.js"></script>
+    <!-- 引入无刷新上传图片 -->
+    <!-- 引入无刷新上传图片 -->
+    <script src="/static/admin/up/jquery.uploadifive.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="/static/admin/up/uploadifive.css">
+</head>
+<body>
+<div class="panel admin-panel">
+    <div class="panel-head"><strong class="icon-reorder"> 内容列表</strong></div>
+    <div class="padding border-bottom">
+        <button type="button" class="button border-yellow" onclick="window.location.href='#add'"><span class="icon-plus-square-o"></span> 添加内容</button>
+    </div>
+    <table class="table table-hover text-center">
+        <tr>
+            <th width="10%">ID</th>
+            <th width="20%">图片</th>
+            <th width="15%">名称</th>
+
+            <th width="10%">排序</th>
+            <th width="15%">操作</th>
+        </tr>
+       <?php if(is_array($data) || $data instanceof \think\Collection || $data instanceof \think\Paginator): $i = 0; $__LIST__ = $data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$val): $mod = ($i % 2 );++$i;?>
+        <tr>
+            <td><?php echo $val['id']; ?></td>
+            <td><img src="/upload/slider/<?php echo $val['img']; ?>" alt="" width="120" height="50" /></td>
+            <td><?php echo $val['slider_name']; ?></td>
+
+            <td><?php echo $val['sort']; ?></td>
+            <td><div class="button-group">
+                <a class="button border-main" href="<?php echo url('admin/slider/edit',['id'=>$val['id']]); ?>" ><span class="icon-edit"></span> 修改</a>
+                <a class="button border-red" href="javascript:void(0)" onclick="return del(this,<?php echo $val['id']; ?>)"><span class="icon-trash-o"></span> 删除</a>
+            </div></td>
+        </tr>
+        <?php endforeach; endif; else: echo "" ;endif; ?>
+
+
+    </table>
+</div>
+<script type="text/javascript">
+     function del(obj,id)
+     {
+         layer.confirm('确定要删除吗', {icon: 3, title:'提示'}, function(index){
+             //do something
+             $.get("<?php echo url('admin/slider/del'); ?>",{id:id},function(data){
+                     if(data==1)
+                     {
+                         layer.msg('删除成功',{icon:6});
+                         $(obj).parent().parent().parent().remove();
+                     }
+                     else
+                     {
+                         layer.msg('删除失败',{icon:5});
+                     }
+             });
+
+         });
+     }
+
+     function xiu(obj,id)
+     {
+         $.get("<?php echo url('admin/slider/edit'); ?>",{id:id},function(data){
+
+         });
+     }
+
+
+
+
+  /*  function del(obj,id){
+        if(confirm("您确定要删除吗?")){
+         //   alert(id);
+
+        }
+    }*/
+</script>
+
+<div class="panel admin-panel margin-top" id="add">
+    <div class="panel-head"><strong><span class="icon-pencil-square-o"></span> 增加内容</strong></div>
+    <div class="body-content">
+        <form method="post" id="slider_form" class="form-x" action="<?php echo url('admin/slider/insert'); ?>" enctype="multipart/form-data">
+            <div class="form-group">
+                <div class="label">
+                    <label>轮播图标题：</label>
+                </div>
+                <div class="field">
+                    <input type="text" class="input w50" value="" name="slider_name" data-validate="required:请输入标题" />
+                    <div class="tips"></div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="label">
+                    <label>轮播图url</label>
+                </div>
+                <div class="field">
+                    <input type="text" class="input w50" name="slider_url" value=""  />
+                    <div class="tips"></div>
+                </div>
+            </div>
+            <div class="form-group" style="margin-left:50px;">
+                <label for="" class="col-sm-2 control-label" style="float: left;">新闻图片</label>
+
+                <div class="fileds" style="float: left">
+                    <input type="hidden" name="img" id="imgHidden">
+                    <input type="file" name=""  id="img">
+                    <br>
+                    <div id="main"></div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="label">
+                    <label>排序：</label>
+                </div>
+                <div class="field">
+                    <input type="text" class="input w50" name="sort" value="0"  data-validate="required:,number:排序必须为数字" />
+                    <div class="tips"></div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="label">
+                    <label></label>
+                </div>
+                <div class="field">
+                    <button class="button bg-main icon-check-square-o" type="button" onclick="save(this)"> 提交</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</body></html>
+<script>
+    function save(obj)
+    {
+           var data=$('#slider_form').serializeArray();
+          // alert(data);
+           $.ajax({
+               'url':"<?php echo url('admin/slider/insert'); ?>",
+               'type':'post',
+               'data':data,
+               success:function(data){
+                    if(data==1)
+                    {
+                        layer.msg('添加成功',{icon:6});
+                        window.location.reload();
+                    }
+                    else if(data==0)
+                    {
+                        layer.msg('添加失败',{icon:5});
+                    }
+                    else
+                    {
+                         layer.msg(data,{icon:5});
+                    }
+               }
+           });
+
+    }
+
+</script>
+
+<script>
+//    var ue = UE.getEditor('editor');
+
+
+    $('#img').uploadifive({
+        // 是否自动上传
+        'auto'             : true,
+        // 显示上传动画DIV
+        'queueID'          : 'main',
+        // 处理文件上传的地址
+        'uploadScript'     : "<?php echo url('admin/slider/upload'); ?>",
+        // 文件上传框文字
+        "buttonText":"上传图片",
+        // 监听图片上传成功
+        'onUploadComplete' : function(file, data) {
+            // $("#main").find(".uploadifive-queue-item").remove();
+            // $("#main").append(`<img width='200px' src='/upload/tmp/${data}'>`);
+            $("#main").html("<img width='200px' src='/upload/slider/"+data+"'>");
+    //      alert(data);
+            $("#imgHidden").val(data);
+        }
+    });
+</script>

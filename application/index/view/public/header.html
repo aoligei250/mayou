@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{$info.web_title}</title>
+    <link rel="stylesheet" type="text/css" href="/static/index/bs/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/static/index/bs/static/dao.css">
+    <script type="text/javascript" src="/static/index/bs/js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="/static/index/bs/js/bootstrap.min.js"></script>
+    <!--layer-->
+    <script src="/static/admin/layer/layer.js"></script>
+    <meta name="description"
+          content="{$info.web_description}"/>
+    <meta name="description"
+          content="{$info.web_keywords}"/>
+
+</head>
+<body>
+<div  class="container">
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-
+                        toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    {$info.web_title}  <span class="glyphicon glyphicon-cutlery"></span>
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    {volist name="column" id="val"}
+                    <li><a href="{$val.url}">{$val.column_name}</a></li>
+                    {/volist}
+
+                </ul>
+
+                <div style="float:right;margin-right:100px;">
+                    <form class="navbar-form navbar-left" method="post" action="{:url('index/index/type')}" role="search">
+                        <div class="form-group">
+                            <input type="text" name="search" class="form-control" placeholder="Search">
+                        </div>
+                        <button type="submit" class="btn btn-default">搜索</button>
+                    </form>
+                </div>
+    </nav>
+
+
+
+    <!-- 登录 购物车 logo-->
+    <div class="row">
+        <div class="col-md-3">
+            <img src="/upload/info/{$info.web_image}" width="200px;" height="100px;">
+        </div>
+        <div class="col-md-3">
+
+        </div>
+        <div class="col-md-3">
+
+        </div>
+        <div class="col-md-3" style="text-align: center;">
+            <div style="width: 300px;height: 100px;margin-top: 60px;">
+                {if condition="session('user_name')"}
+                <a>{$Request.session.user_name}</a>
+                <a href="{:url('index/login/loginout')}">退出登录</a>
+                {else/}
+                <a href="{:url('index/login/index')}">登录</a>
+                <a href="{:url('index/login/register')}">注册</a>
+                {/if}
+                <a  href="{:url('index/car/index')}">购物车</a>
+            </div>
+
+        </div>
+
+    </div>
+
+

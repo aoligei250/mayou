@@ -1,0 +1,111 @@
+{include file="public/static" /}
+<div class="panel admin-panel">
+    <div class="panel-head"><strong class="icon-reorder"> 内容列表</strong></div>
+    <div class="padding border-bottom">
+        <a class="button border-yellow" href=""><span class="icon-plus-square-o"></span> 添加内容</a>
+    </div>
+    <table class="table table-hover text-center">
+        <tr>
+            <th width="5%">ID</th>
+            <th>管理员名称</th>
+
+            <th>管理员注册时间</th>
+            <th width="250">操作</th>
+        </tr>
+        {volist name="data" id="val"}
+        <tr>
+            <td>{$val.id}</td>
+            <td>{$val.admin_name}</td>
+
+            <td>{:date("y-m-d h-i-s ",$val.time)}</td>
+
+            <td>
+                <div class="button-group">
+
+                    <a class="button border-red"  href="{:url('admin/admin/delete',['id'=>$val.id])}"><span class="icon-trash-o"></span> 删除</a>
+                </div>
+            </td>
+        </tr>
+        {/volist}
+
+
+
+
+
+    </table>
+</div>
+<script>
+
+</script>
+<div class="panel admin-panel margin-top">
+    <div class="panel-head" id="add"><strong><span class="icon-pencil-square-o"></span>增加内容</strong></div>
+    <div class="body-content">
+        <form method="post" class="form-x" id="form-x" action="">
+            <div class="form-group">
+                
+            </div>
+
+            <div class="form-group">
+                <div class="label">
+                    <label>管理员名称</label>
+                </div>
+                <div class="field">
+                    <input type="text" class="input w50" name="admin_name" value=""  />
+                    <div class="tips"></div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="label">
+                    <label>管理员密码</label>
+                </div>
+                <div class="field">
+                    <input type="text" class="input w50" name="password" value=""  />
+                    <div class="tips"></div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="label">
+                    <label>确认管理员密码</label>
+                </div>
+                <div class="field">
+                    <input type="text" class="input w50" name="repassword" value=""  />
+                    <div class="tips"></div>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <div class="label">
+                    <label></label>
+                </div>
+                <div class="field">
+                    <button class="button bg-main icon-check-square-o" type="submit" onclick="save()"> 提交</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</body></html>
+<script>
+    function save() {
+       var data=$(".form-x").serialize();
+         $.ajax({
+            'url':"{:url('admin/admin/save')}",
+            'type':'post',
+            'data':data,
+            success:function (data) {
+                 if(data==1)
+                 {
+                     layer.msg('添加成功',{icon:6});
+                     window.location.reload();
+                 }
+                 else
+                 {
+                     layer.msg(data,{icon:5});
+                 }
+
+             }
+        });
+}
+
+</script>

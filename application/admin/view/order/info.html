@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="renderer" content="webkit">
+    <title></title>
+    <link rel="stylesheet" href="/static/admin/css/pintuer.css">
+    <link rel="stylesheet" href="/static/admin/css/admin.css">
+    <script src="/static/admin/js/jquery.js"></script>
+    <script src="/static/admin/js/pintuer.js"></script>
+    <!--layer-->
+    <script src="/static/admin/layer/layer.js"></script>
+    <!-- 引入无刷新上传图片 -->
+    <!-- 引入无刷新上传图片 -->
+    <script src="/static/admin/up/jquery.uploadifive.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="/static/admin/up/uploadifive.css">
+</head>
+<body>
+<div class="panel admin-panel">
+    <div class="panel-head"><strong class="icon-reorder"> 订单内容列表</strong></div>
+    <div class="padding border-bottom">
+
+    </div>
+    <table class="table table-hover text-center">
+        <tr>
+            <th width="10%">订单号</th>
+            <th width="20%">商品图片</th>
+            <th width="15%">商品名称</th>
+
+            <th width="10%">商品数量</th>
+            <th width="10%">商品总价</th>
+
+        </tr>
+        {volist name="order" id="val"}
+        <tr>
+           <td>{$val.order_id}</td>
+          <td>
+              <img src="/upload/good/{$val.image}" width="200px;">
+              </td>
+            <td>
+                {$val.goods_name}
+            </td>
+            <td>
+                {$val.num}
+            </td>
+            <td>
+                {$val.price}
+            </td>
+
+        </tr>
+        {/volist}
+
+
+
+
+    </table>
+</div>
+</body>
+</html>
+<script>
+    function ajax_status(id) {
+        alert(id);
+        //   var status=$("#TestSelect option:selected").val();
+        //  alert(status);
+        /* $.get("{:url('admin/order/status')}",{id:id,status:status},function (data) {
+             alert(data);
+         })*/
+    }
+</script>
